@@ -2,6 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 
 
 const GlobalStyle = createGlobalStyle`
+
   /* Указываем box sizing */
     *,
     *::before,
@@ -15,12 +16,15 @@ const GlobalStyle = createGlobalStyle`
       padding: 0;
     }
     
+    
     /* Убираем внешние отступы */
     body,
     h1,
     h2,
     h3,
     h4,
+    h5,
+    h6,
     p,
     ul[class],
     ol[class],
@@ -30,7 +34,9 @@ const GlobalStyle = createGlobalStyle`
     blockquote,
     dl,
     dd {
+      padding: 0;
       margin: 0;
+      font-family: ${props => props.theme.font.family};
     }
     
     /* Выставляем основные настройки по-умолчанию для body */
@@ -69,7 +75,14 @@ const GlobalStyle = createGlobalStyle`
     textarea,
     select {
       font: inherit;
+      background-color: transparent;
+      border: none;
+      outline: 0;
+      &:focus, &:active {
+        outline:0;
+      }
     }
+    
     
     /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
     @media (prefers-reduced-motion: reduce) {
