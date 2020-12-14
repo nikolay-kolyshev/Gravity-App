@@ -13,6 +13,7 @@ export const Card = css`
 `
 export const CardButtonStyled = styled.button`
      ${Card};
+     padding: ${({icon}) =>(!icon) && '20px 20px'};
      border: ${ ({status}) => (status)? '2px solid #27DC8F' : '1px solid #E0E0E0'};
      &:hover {
         border: 2px solid ${({theme}) => theme.colors.primary};

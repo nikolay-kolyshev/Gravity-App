@@ -69,10 +69,10 @@ const App = () => {
             <TypographySupTitle>
                 Надзаголовок
             </TypographySupTitle>
-            <EmojiList EmojiArray={EmoliArray}></EmojiList>
-            <CardButton title="Карточка-Emoji">
+            <EmojiList  EmojiArray={EmoliArray}></EmojiList>
+            <CardButton icon={okHandIcon} title="Карточка-Emoji">
                 <TypographyСlassified>Текст по классификации размера</TypographyСlassified>
-                <EmojiList EmojiArray={EmoliArray}></EmojiList>
+                <EmojiList icon={CardButton.icon} EmojiArray={EmoliArray}></EmojiList>
             </CardButton>
         </ThemeProvider>
     )

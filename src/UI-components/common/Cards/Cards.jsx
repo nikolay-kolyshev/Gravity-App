@@ -9,7 +9,7 @@ import {
 import CheckmarkSmall from './../../../assets/images/other/Checkmark_small.png';
 export const CardButton = ({status, icon, title, children}) => (
     <div >
-        <CardButtonStyled status={status}>
+        <CardButtonStyled status={status} icon={icon}>
             {icon && (<IconStyled size={32} icon={icon}/>)}
             <div>
                 <div>
