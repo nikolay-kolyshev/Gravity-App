@@ -2,7 +2,7 @@ import styled, {css} from 'styled-components'
 import {TypographyStyles} from "../../../styles/common-components/Typography-styled"
 import {Picture} from "../Picture/Picture";
 
-const Card = css`
+export const Card = css`
      width: 354px;
      border-radius: 7px;
      display: flex;
@@ -11,7 +11,6 @@ const Card = css`
      text-align: left;
      padding: 20px 15px 20px 8px;
 `
-debugger;
 export const CardButtonStyled = styled.button`
      ${Card};
      border: ${ ({status}) => (status)? '2px solid #27DC8F' : '1px solid #E0E0E0'};
@@ -26,12 +25,10 @@ export const CardGoalStyled = styled.div`
           font-weight: bold;
      }
 `
-
 export const Title = styled.h5`
       ${TypographyStyles};
       font-weight: bold;
 `
-
 export const IconStyled = styled(Picture)`
       margin: 22px;
       

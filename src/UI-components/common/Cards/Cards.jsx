@@ -3,7 +3,6 @@ import {
     CardButtonStyled,
     CardGoalStyled,
     IconStyled,
-    PurePictureStyled,
     StatusPictureStyled,
     Title
 } from "./Cards-styled";
@@ -11,7 +10,7 @@ import CheckmarkSmall from './../../../assets/images/other/Checkmark_small.png';
 export const CardButton = ({status, icon, title, children}) => (
     <div >
         <CardButtonStyled status={status}>
-            <IconStyled size={32} icon={icon}/>
+            {icon && (<IconStyled size={32} icon={icon}/>)}
             <div>
                 <div>
                     <Title>{title}</Title>

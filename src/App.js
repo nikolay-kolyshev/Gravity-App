@@ -14,7 +14,28 @@ import {CardButton, CardGoal} from "./UI-components/common/Cards/Cards";
 import avocadoIcon from "../src/assets/images/icons/avocado_emoji.png"
 import broccoliIcon from "../src/assets/images/icons/Broccoli_emoji.png"
 import okHandIcon from "../src/assets/images/icons/ok_hand_emoji.png"
-
+import {Button} from "./UI-components/common/Buttons/Button";
+import {EmojiList} from './UI-components/common/Cards/Emoji/EmojiList'
+const EmoliArray= [
+    broccoliIcon,
+    broccoliIcon,
+    broccoliIcon,
+    broccoliIcon,
+    broccoliIcon,
+    broccoliIcon,
+    broccoliIcon,
+    broccoliIcon,
+    broccoliIcon,
+    broccoliIcon,
+    broccoliIcon,
+    broccoliIcon,
+    broccoliIcon,
+    broccoliIcon,
+    broccoliIcon,
+    broccoliIcon,
+    broccoliIcon,
+    broccoliIcon,
+]
 const App = () => {
     return (
         <ThemeProvider theme={mainTheme}>
@@ -39,9 +60,20 @@ const App = () => {
             <CardGoal icon={okHandIcon}>
                 Выглядеть <span>привлекательно</span>
             </CardGoal>
+            <Button status={true}>
+                <TypographyСlassified size={18}>Next</TypographyСlassified>
+            </Button>
+            <Button >
+                <TypographyСlassified size={18}>Next</TypographyСlassified>
+            </Button>
             <TypographySupTitle>
                 Надзаголовок
             </TypographySupTitle>
+            <EmojiList EmojiArray={EmoliArray}></EmojiList>
+            <CardButton title="Карточка-Emoji">
+                <TypographyСlassified>Текст по классификации размера</TypographyСlassified>
+                <EmojiList EmojiArray={EmoliArray}></EmojiList>
+            </CardButton>
         </ThemeProvider>
     )
 }
