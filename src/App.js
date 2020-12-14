@@ -30,6 +30,9 @@ const App = () => {
             <CardButton title="Карточка-вопрос 2" icon={broccoliIcon}>
                 <TypographyСlassified>Текст по классификации размера</TypographyСlassified>
             </CardButton>
+            <CardButton status={true} title="Карточка-вопрос 3" icon={okHandIcon}>
+                <TypographyСlassified>Текст по классификации размера</TypographyСlassified>
+            </CardButton>
             <CardButton title="Карточка-вопрос 3" icon={okHandIcon}>
                 <TypographyСlassified>Текст по классификации размера</TypographyСlassified>
             </CardButton>

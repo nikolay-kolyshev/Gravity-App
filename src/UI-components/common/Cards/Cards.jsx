@@ -1,18 +1,29 @@
 import React from "react"
-import {CardButtonStyled, CardGoalStyled, IconStyled, Title} from "./Cards-styled";
+import {
+    CardButtonStyled,
+    CardGoalStyled,
+    IconStyled,
+    PurePictureStyled,
+    StatusPictureStyled,
+    Title
+} from "./Cards-styled";
+import CheckmarkSmall from './../../../assets/images/other/Checkmark_small.png';
+export const CardButton = ({status, icon, title, children}) => (
+    <div >
+        <CardButtonStyled status={status}>
+            <IconStyled size={32} icon={icon}/>
+            <div>
+                <div>
+                    <Title>{title}</Title>
+                </div>
+                <div>
+                    {children}
+                </div>
+            </div>
+           {status && (<StatusPictureStyled icon={CheckmarkSmall}/>)}
+        </CardButtonStyled>
 
-export const CardButton = ({icon, title, children}) => (
-    <CardButtonStyled>
-        <IconStyled icon={icon}/>
-        <div>
-            <div>
-                <Title>{title}</Title>
-            </div>
-            <div>
-                {children}
-            </div>
-        </div>
-    </CardButtonStyled>
+    </div>
 )
 
 export const CardGoal = ({icon, children}) => (

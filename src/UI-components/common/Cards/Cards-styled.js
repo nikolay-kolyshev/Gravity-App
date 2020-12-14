@@ -1,6 +1,6 @@
 import styled, {css} from 'styled-components'
 import {TypographyStyles} from "../../../styles/common-components/Typography-styled"
-import {Icon} from "../Icon/Icon";
+import {Picture} from "../Picture/Picture";
 
 const Card = css`
      width: 354px;
@@ -9,12 +9,12 @@ const Card = css`
      align-items: center;
      transition: border 0.25s;
      text-align: left;
-     padding: 20px 28px;
+     padding: 20px 15px 20px 8px;
 `
-
+debugger;
 export const CardButtonStyled = styled.button`
      ${Card};
-     border: 1px solid #E0E0E0;
+     border: ${ ({status}) => (status)? '2px solid #27DC8F' : '1px solid #E0E0E0'};
      &:hover {
         border: 2px solid ${({theme}) => theme.colors.primary};
      }
@@ -32,7 +32,12 @@ export const Title = styled.h5`
       font-weight: bold;
 `
 
-export const IconStyled = styled(Icon)`
-      margin: 8px 25px 0 0;
-      align-self: flex-start;
+export const IconStyled = styled(Picture)`
+      margin: 22px;
+      
+`
+export const StatusPictureStyled = styled(Picture)`
+    min-width: 24px;
+     min-height: 24px; 
+   
 `
