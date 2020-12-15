@@ -8,15 +8,23 @@ export const Typography = styled.span`
   ${TypographyStyles}
 `
 
+export const TypographyHGroup = styled.hgroup`
+  text-align: center;
+`
+
 export const TypographyTitle = styled.h1`
-  font-size: ${({fontTitleSizeCustom, fontTitleSize}) => fontTitleSizeCustom || fontTitleSize}px;
+  font-size: ${({size, theme}) => size || theme.font.titleSize}px;
   font-weight: 500;
+  line-height: 33px;
+  letter-spacing: -0.05em;
 `
 
 export const TypographySupTitle = styled.h2`
-  font-size: 28px;
+  font-size: 18px;
   font-weight: 500;
   color: ${({theme}) => theme.colors.secondary};
+  line-height: 120%;
+  letter-spacing: -0.05em;
 `
 
 export const TypographyСlassified = styled(Typography)`

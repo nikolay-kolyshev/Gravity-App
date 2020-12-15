@@ -3,6 +3,6 @@ import {PictureStyled} from "./Picture-styled";
 
 export const Picture = ({icon, ...restProps}) => (
     <PictureStyled {...restProps}>
-        <img src={icon}/>
+        <img src={icon} alt="Иконка вопроса"/>
     </PictureStyled>
 )

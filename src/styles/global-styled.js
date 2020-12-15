@@ -36,7 +36,8 @@ const GlobalStyle = createGlobalStyle`
     dd {
       padding: 0;
       margin: 0;
-      font-family: ${props => props.theme.font.family};
+      font-family: ${({theme}) => theme.font.family};
+      color: ${({theme}) => theme.colors.text};
     }
     
     /* Выставляем основные настройки по-умолчанию для body */
