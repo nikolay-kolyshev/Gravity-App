@@ -4,7 +4,7 @@ import {Picture} from "../Picture/Picture";
 import {ImageInDiv} from "../../../styles/common-components/Images";
 
 export const Card = css`
-     width: 100%;
+     
      border-radius: 7px;
      display: flex;
      align-items: center;
@@ -13,8 +13,8 @@ export const Card = css`
      padding: 20px 15px;
 `
 export const CardButtonStyled = styled.button`
-     ${Card};
-     width: ${({width}) => width || "100%"};
+     ${Card}
+     ${({width,ContentWrapper}) => (!ContentWrapper) && (width ? `width:${width}`:`width:100%`)};
      padding: ${({icon}) =>(!icon) && '20px 20px'};
      border: ${ ({isActive}) => (isActive) ? '2px solid #27DC8F' : '1px solid #E0E0E0'};
      &:hover {
@@ -42,10 +42,10 @@ export const Title = styled.h5`
       font-weight: bold;
 `
 export const IconStyled = styled(Picture)`
-      margin: 22px;
+      margin-right: 20px;
       
 `
-export const StatusPictureStyled = styled(Picture)`
+export const IsActivePictureStyled = styled(Picture)`
     min-width: 24px;
     min-height: 24px; 
 `
@@ -60,11 +60,23 @@ export const TitleWrapper = styled.div`
 
 export const ImageGenderWrapper = styled.div`
     
-    width: 100%;
-    position: absolute;
-    bottom: 56px;
+        width: 100%;
+        position: absolute;
+        bottom: 56px;
     
     img {
       ${ImageInDiv}
     }
+`
+export const CardListStyled = styled.div`
+     width:inherit;
+     display:flex;
+     flex-wrap:wrap;
+     justify-content:center;
+     button{
+        margin-bottom: 9px;
+        margin-left: ${({horizontalGap}) => horizontalGap && `7px`};
+        margin-right: ${({horizontalGap}) => horizontalGap && `7px`};
+     }
+     
 `

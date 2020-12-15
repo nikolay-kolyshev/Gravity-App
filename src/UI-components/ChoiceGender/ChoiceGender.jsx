@@ -24,9 +24,9 @@ export default  () => {
             <div style={{marginBottom: "31px"}}>
                 Выберите ваш пол
             </div>
-            <LayoutFlex width="100%">
+            <LayoutFlex width="100%" heigth="100%">
                 <CardButtonGender title="True" gender="male" isActive={true} style={{marginRight: "24px"}}/>
-                <CardButtonGender title="True morkovku" gender="female"/>
+                <CardButtonGender title="Female" gender="female" isActive={true}/>
             </LayoutFlex>
         </>
     )
