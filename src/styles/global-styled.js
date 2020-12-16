@@ -84,6 +84,12 @@ const GlobalStyle = createGlobalStyle`
       }
     }
     
+    button,
+    input[button]
+    input[submit]{
+      cursor: pointer;
+    }
+    
     
     /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
     @media (prefers-reduced-motion: reduce) {

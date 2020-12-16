@@ -10,6 +10,7 @@ export const LayoutOuter = styled.div`
 
 export const LayoutInner = styled.main`
   background-color: ${({theme}) => theme.colors.background};
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
