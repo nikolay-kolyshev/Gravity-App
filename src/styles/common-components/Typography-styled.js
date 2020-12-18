@@ -4,7 +4,7 @@ export const TypographyStyles = css`
   font-size: ${({theme}) => theme.font.size}px;
 `
 
-export const Typography = styled.span`
+export const Typography = styled.p`
   ${TypographyStyles}
 `
 

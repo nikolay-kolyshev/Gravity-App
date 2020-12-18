@@ -1,21 +1,16 @@
 import React from 'react'
-import logo from "../../../assets/images/logo.svg"
-import Logo from "../../common/Logo/Logo";
-import Header from "../../Header/Header";
-import {TypographyHGroup, TypographySupTitle, TypographyTitle} from "../../../styles/common-components/Typography-styled";
-import {LayoutFlex} from "../../../styles/common-components/Layout";
-import {CardButtonGender} from "../../common/Cards/Cards";
+import logo from "../../../../assets/images/logo.svg"
+import Logo from "../../../common/Logo/Logo";
+import Header from "../../../Header/Header";
+import {TypographyHGroup, TypographySupTitle, TypographyTitle} from "../../../../styles/common-components/Typography-styled";
+import {LayoutFlex} from "../../../../styles/common-components/Layout";
+import {CardButtonGender} from "../../../common/Cards/Cards";
 
-export default ({setFieldValue, currentGender, fieldsComponentsState, setFieldsComponentsState, nextKey}) => {
+export default ({setFieldValue, currentValue, indexState, setFieldsComponentsState}) => {
 
     const handleChoiceGender = value => {
         setFieldValue("gender", value)
-        debugger
-        setFieldsComponentsState({
-            ...fieldsComponentsState,
-            "gender": false,
-            [nextKey]: true
-        })
+        setFieldsComponentsState()
     }
 
     return (

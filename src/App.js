@@ -6,14 +6,14 @@ import {mainTheme} from "./styles/themes"
 import {ThemeProvider} from "styled-components"
 import {LayoutInner, LayoutOuter} from "./styles/common-components/Layout";
 import Routes from "./UI-components/Routes/Routes";
-
+import Input from './UI-components/common/InputBox/InputBox'
 const App = () => {
     return (
         <ThemeProvider theme={mainTheme}>
             <GlobalStyle/>
             <LayoutOuter>
                 <LayoutInner>
-                    <Routes/>
+                   <Routes/>
                 </LayoutInner>
             </LayoutOuter>
         </ThemeProvider>

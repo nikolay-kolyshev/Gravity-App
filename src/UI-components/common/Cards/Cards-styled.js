@@ -14,12 +14,19 @@ export const Card = css`
 `
 export const CardButtonStyled = styled.button`
      ${Card}
+     justify-content: space-between;
+     div{
+        display:flex;
+        
+     }
+     
      ${({width,ContentWrapper}) => (!ContentWrapper) && (width ? `width:${width}`:`width:100%`)};
      padding: ${({icon}) =>(!icon) && '20px 20px'};
-     border: ${ ({isActive}) => (isActive) ? '2px solid #27DC8F' : '1px solid #E0E0E0'};
+     border: ${ ({isActive}) => (isActive) ? '2px solid #27DC8F' : '2px solid #E0E0E0'};
      &:hover {
         border: 2px solid ${({theme}) => theme.colors.primary};
      }
+     
 `
 export const CardButtonGenderStyled = styled(CardButtonStyled)`
      width: 100%;
@@ -43,11 +50,13 @@ export const Title = styled.h5`
 `
 export const IconStyled = styled(Picture)`
       margin-right: 20px;
+      height:32px;
+      width:32px;
       
 `
 export const IsActivePictureStyled = styled(Picture)`
-    min-width: 24px;
-    min-height: 24px; 
+    max-width: 24px;
+    max-height: 24px; 
 `
 
 export const TitleWrapper = styled.div`

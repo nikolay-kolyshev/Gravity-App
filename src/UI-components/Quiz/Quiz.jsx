@@ -1,12 +1,16 @@
 import React, {useState} from "react"
-import ChoiceGender from "./components/QuizGender";
+import ChoiceGender from "./components/QuizGenderLayout/QuizGender";
 import {Form, Formik} from "formik";
-import QuizGender from "./components/QuizGender";
-
+import QuizGender from "./components/QuizGenderLayout/QuizGender";
+import MainGoal from "./components/MainGoalLayout/MainGoal";
+import Motivation from "./components/MotivationLayout/Motivation";
+import Age from "./components/AgeLayout/Age"
 export default () => {
-
     const [fieldsComponentsState, setFieldsComponentsState] = useState({
-        gender: true
+        genderLayout: true,
+        goalLayout: false,
+        motivationLayout:false,
+        ageLayout: false,
     })
 
     const confirmSubmit = (values) => {
@@ -16,37 +20,70 @@ export default () => {
     return (
         <Formik
             initialValues={{
-                gender: ""
+                gender: null,
+                goal: null,
+                motivation: null,
+                age: null
             }}
             onSubmit={confirmSubmit}
             disabled={true}
         >
+
             {({setFieldValue, handleSubmit, values}) => {
 
                 const fieldsComponents = {
-                    "gender": (
+                    "genderLayout": (
                         <QuizGender
                             setFieldValue={setFieldValue}
                             currentGender={values.gender}
                             fieldsComponentsState={fieldsComponentsState}
                             setFieldsComponentsState={setFieldsComponentsState}
-                            nextKey="goal"
+                            nextKey="goalLayout"
                         />
                     ),
-                    "goal": <div>Жопа</div>
+                    "goalLayout": (
+                        <MainGoal
+                            currentGoal={values.goal}
+                            setFieldValue={setFieldValue}
+                            fieldsComponentsState={fieldsComponentsState}
+                            setFieldsComponentsState={setFieldsComponentsState}
+                            nextKey="motivationLayout"
+                            previousKey="genderLayout"
+                          />
+                    ),
+                    "motivationLayout":(
+                        <Motivation
+                            currentMotivation={values.motivation}
+                            setFieldValue={setFieldValue}
+                            fieldsComponentsState={fieldsComponentsState}
+                            setFieldsComponentsState={setFieldsComponentsState}
+                            nextKey="ageLayout"
+                            previousKey="goalLayout"
+                        />
+                    ),
+                    "ageLayout":(
+                        <Age
+                            currentAge={values.age}
+                            setFieldValue={setFieldValue}
+                            fieldsComponentsState={fieldsComponentsState}
+                            setFieldsComponentsState={setFieldsComponentsState}
+                            nextKey="genderLayout"
+                            previousKey="motivationLayout"
+                        />
+                    )
                 }
 
                 const showFieldsComponents = () => {
-                    // TODO: refactoring
-                    const fieldArray = Object.entries(fieldsComponentsState).find(([key, value]) => value)
+                    const fieldArray = Object.entries(fieldsComponentsState)
+                            .find(([key, value]) => value)
                     if (!fieldArray && !fieldValue.length)
                         return <></>
-                    const [fieldValue] = fieldArray
-                    return fieldsComponents[fieldValue]
+                    const [fieldKey] = fieldArray
+                    return fieldsComponents[fieldKey]
                 }
 
                 return (
-                    <Form onSubmit={handleSubmit}>
+                    <Form onSubmit={handleSubmit} >
                         {showFieldsComponents()}
                         <button type="submit">Submit</button>
                     </Form>

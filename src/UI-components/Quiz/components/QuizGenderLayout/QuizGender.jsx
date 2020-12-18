@@ -1,16 +1,27 @@
 import React from 'react'
-import logo from "../../../assets/images/logo.svg"
-import Logo from "../../common/Logo/Logo";
-import Header from "../../Header/Header";
-import {TypographyHGroup, TypographySupTitle, TypographyTitle} from "../../../styles/common-components/Typography-styled";
-import {LayoutFlex} from "../../../styles/common-components/Layout";
-import {CardButtonGender} from "../../common/Cards/Cards";
+import logo from "../../../../assets/images/logo.svg"
+import Logo from "../../../common/Logo/Logo";
+import Header from "../../../Header/Header";
 
-export default ({setFieldValue, currentValue, indexState, setFieldsComponentsState}) => {
+import {
+    TypographyHGroup,
+    TypographySupTitle,
+    TypographyTitle,
+    TypographyСlassified
+} from "../../../../styles/common-components/Typography-styled";
+import {LayoutFlex} from "../../../../styles/common-components/Layout";
+import {CardButtonGender} from "../../../common/Cards/Cards";
+
+
+export default ({setFieldValue, currentGender, fieldsComponentsState, setFieldsComponentsState, nextKey}) => {
 
     const handleChoiceGender = value => {
         setFieldValue("gender", value)
-        setFieldsComponentsState()
+        setFieldsComponentsState({
+            ...fieldsComponentsState,
+            "genderLayout": false,
+            [nextKey]: true
+        })
     }
 
     return (
@@ -26,13 +37,13 @@ export default ({setFieldValue, currentValue, indexState, setFieldsComponentsSta
                     Получите ваш персональный план по снижению веса
                 </TypographyTitle>
             </TypographyHGroup>
-            <div style={{marginBottom: "31px"}}>
+            <TypographyСlassified style={{marginBottom: "31px",textAlign:"center"}}>
                 Выберите ваш пол
-            </div>
+            </TypographyСlassified>
             <LayoutFlex width="100%" heigth="100%">
                 <CardButtonGender
                     type="button"
-                    title="True"
+                    title="Male"
                     gender="male"
                     isActive={currentGender === "male"}
                     style={{marginRight: "24px"}}
@@ -45,6 +56,7 @@ export default ({setFieldValue, currentValue, indexState, setFieldsComponentsSta
                     isActive={currentGender === "female"}
                     onClick={() => handleChoiceGender("female")}
                 />
+
             </LayoutFlex>
         </>
     )
