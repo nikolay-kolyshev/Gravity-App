@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/Gravity-App/static/css/main.424c7103.chunk.css",
+    "main.js": "/Gravity-App/static/js/main.2626f6ae.chunk.js",
+    "main.js.map": "/Gravity-App/static/js/main.2626f6ae.chunk.js.map",
+    "runtime-main.js": "/Gravity-App/static/js/runtime-main.a314fe7f.js",
+    "runtime-main.js.map": "/Gravity-App/static/js/runtime-main.a314fe7f.js.map",
+    "static/css/2.679831fc.chunk.css": "/Gravity-App/static/css/2.679831fc.chunk.css",
+    "static/js/2.0b954e18.chunk.js": "/Gravity-App/static/js/2.0b954e18.chunk.js",
+    "static/js/2.0b954e18.chunk.js.map": "/Gravity-App/static/js/2.0b954e18.chunk.js.map",
+    "index.html": "/Gravity-App/index.html",
+    "static/css/2.679831fc.chunk.css.map": "/Gravity-App/static/css/2.679831fc.chunk.css.map",
+    "static/css/main.424c7103.chunk.css.map": "/Gravity-App/static/css/main.424c7103.chunk.css.map",
+    "static/js/2.0b954e18.chunk.js.LICENSE.txt": "/Gravity-App/static/js/2.0b954e18.chunk.js.LICENSE.txt",
+    "static/media/Devil.62f3f2e7.png": "/Gravity-App/static/media/Devil.62f3f2e7.png",
+    "static/media/Tango.a13abc47.png": "/Gravity-App/static/media/Tango.a13abc47.png",
+    "static/media/apple.b850ea73.png": "/Gravity-App/static/media/apple.b850ea73.png",
+    "static/media/female.adf2593a.png": "/Gravity-App/static/media/female.adf2593a.png",
+    "static/media/logo.ed475409.svg": "/Gravity-App/static/media/logo.ed475409.svg",
+    "static/media/male.1fb1e322.png": "/Gravity-App/static/media/male.1fb1e322.png",
+    "static/media/superGirl.a9588a2f.png": "/Gravity-App/static/media/superGirl.a9588a2f.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a314fe7f.js",
+    "static/css/2.679831fc.chunk.css",
+    "static/js/2.0b954e18.chunk.js",
+    "static/css/main.424c7103.chunk.css",
+    "static/js/main.2626f6ae.chunk.js"
+  ]
+}
