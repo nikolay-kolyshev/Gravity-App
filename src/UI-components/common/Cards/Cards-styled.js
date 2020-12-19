@@ -52,7 +52,6 @@ export const IconStyled = styled(Picture)`
       margin-right: 20px;
       height:32px;
       width:32px;
-      
 `
 export const IsActivePictureStyled = styled(Picture)`
     max-width: 24px;

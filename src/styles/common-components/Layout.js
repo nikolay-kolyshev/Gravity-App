@@ -17,6 +17,7 @@ export const LayoutInner = styled.main`
   padding: 19px 16px;
   max-width: 375px;
   min-width: 375px;
+  position: relative;
 `
 
 export const LayoutFlex = styled.div`

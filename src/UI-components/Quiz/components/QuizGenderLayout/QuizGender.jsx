@@ -13,19 +13,15 @@ import {LayoutFlex} from "../../../../styles/common-components/Layout";
 import {CardButtonGender} from "../../../common/Cards/Cards";
 
 
-export default ({setFieldValue, currentGender, fieldsComponentsState, setFieldsComponentsState, nextKey}) => {
+export default ({handlePageNext, setFieldValue, currentValue, currentKey}) => {
 
-    const handleChoiceGender = value => {
-        setFieldValue("gender", value)
-        setFieldsComponentsState({
-            ...fieldsComponentsState,
-            "genderLayout": false,
-            [nextKey]: true
-        })
+    const handleConfirm = value => {
+        setFieldValue([currentKey], value)
+        handlePageNext()
     }
 
     return (
-        <>
+        <div>
             <Header style={{marginBottom: "34px"}}>
                 <Logo url={logo}/>
             </Header>
@@ -45,20 +41,19 @@ export default ({setFieldValue, currentGender, fieldsComponentsState, setFieldsC
                     type="button"
                     title="Male"
                     gender="male"
-                    isActive={currentGender === "male"}
+                    isActive={currentValue === "male"}
                     style={{marginRight: "24px"}}
-                    onClick={() => handleChoiceGender("male")}
+                    onClick={() => handleConfirm("male")}
                 />
                 <CardButtonGender
                     type="button"
                     title="Female"
                     gender="female"
-                    isActive={currentGender === "female"}
-                    onClick={() => handleChoiceGender("female")}
+                    isActive={currentValue === "female"}
+                    onClick={() => handleConfirm("female")}
                 />
-
             </LayoutFlex>
-        </>
+        </div>
     )
 
 }
