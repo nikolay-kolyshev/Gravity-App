@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/Gravity-App/static/css/main.424c7103.chunk.css",
-    "main.js": "/Gravity-App/static/js/main.2626f6ae.chunk.js",
-    "main.js.map": "/Gravity-App/static/js/main.2626f6ae.chunk.js.map",
+    "main.js": "/Gravity-App/static/js/main.6614d3f2.chunk.js",
+    "main.js.map": "/Gravity-App/static/js/main.6614d3f2.chunk.js.map",
     "runtime-main.js": "/Gravity-App/static/js/runtime-main.a314fe7f.js",
     "runtime-main.js.map": "/Gravity-App/static/js/runtime-main.a314fe7f.js.map",
     "static/css/2.679831fc.chunk.css": "/Gravity-App/static/css/2.679831fc.chunk.css",
-    "static/js/2.0b954e18.chunk.js": "/Gravity-App/static/js/2.0b954e18.chunk.js",
-    "static/js/2.0b954e18.chunk.js.map": "/Gravity-App/static/js/2.0b954e18.chunk.js.map",
+    "static/js/2.2ba1642b.chunk.js": "/Gravity-App/static/js/2.2ba1642b.chunk.js",
+    "static/js/2.2ba1642b.chunk.js.map": "/Gravity-App/static/js/2.2ba1642b.chunk.js.map",
     "index.html": "/Gravity-App/index.html",
     "static/css/2.679831fc.chunk.css.map": "/Gravity-App/static/css/2.679831fc.chunk.css.map",
     "static/css/main.424c7103.chunk.css.map": "/Gravity-App/static/css/main.424c7103.chunk.css.map",
-    "static/js/2.0b954e18.chunk.js.LICENSE.txt": "/Gravity-App/static/js/2.0b954e18.chunk.js.LICENSE.txt",
+    "static/js/2.2ba1642b.chunk.js.LICENSE.txt": "/Gravity-App/static/js/2.2ba1642b.chunk.js.LICENSE.txt",
     "static/media/Devil.62f3f2e7.png": "/Gravity-App/static/media/Devil.62f3f2e7.png",
     "static/media/Tango.a13abc47.png": "/Gravity-App/static/media/Tango.a13abc47.png",
     "static/media/apple.b850ea73.png": "/Gravity-App/static/media/apple.b850ea73.png",
@@ -23,8 +23,8 @@
   "entrypoints": [
     "static/js/runtime-main.a314fe7f.js",
     "static/css/2.679831fc.chunk.css",
-    "static/js/2.0b954e18.chunk.js",
+    "static/js/2.2ba1642b.chunk.js",
     "static/css/main.424c7103.chunk.css",
-    "static/js/main.2626f6ae.chunk.js"
+    "static/js/main.6614d3f2.chunk.js"
   ]
 }
