@@ -15,7 +15,7 @@ export default ({setFieldValue, currentValue, handlePageNext, currentKey}) => {
 
     return (
         <div>
-            <TypographyTitle style={{marginTop:"20px",marginBottom:"60px",textAlign:"center"}}>
+            <TypographyTitle align="center" style={{marginTop:"20px",marginBottom:"60px"}}>
                 What motivates you the most
             </TypographyTitle>
             <QuestList>

@@ -1,9 +1,9 @@
 import React from 'react'
 import {TypographyTitle} from "../../../../styles/common-components/Typography-styled";
 import {CardButton, QuestList} from "../../../common/Cards/Cards";
-import apple from '../../../../assets/images/icons/apple.png'
-import rockHand from '../../../../assets/images/icons/Rock_empji.png'
-import strnger from '../../../../assets/images/icons/Get_stronger.png'
+import okHand from '../../../../assets/images/icons/ok_hand_emoji.png'
+import broccoli from '../../../../assets/images/icons/Broccoli_emoji.png'
+import avacado from '../../../../assets/images/icons/avocado_emoji.png'
 
 export default ({setFieldValue, currentGoal, handlePageNext, currentKey, title}) => {
 
@@ -15,29 +15,29 @@ export default ({setFieldValue, currentGoal, handlePageNext, currentKey, title})
     return (
         <div>
             <TypographyTitle style={{marginTop:"20px",marginBottom:"60px"}} align="center">
-                What's your main goal?
+                Choose your diet type
             </TypographyTitle>
             <QuestList>
                 <CardButton type="button"
-                            icon={apple}
+                            icon={okHand}
                             isActive={currentGoal==="Lose Weight"}
-                            title="Lose Weight"
+                            title="No Preference"
                             onClick={() => handleConfirm("Lose Weight")}>
-                    Get lean and strong
+                    I enjoy everything
                 </CardButton>
                 <CardButton type="button"
-                            icon={rockHand}
+                            icon={broccoli}
                             isActive={currentGoal==="Get fitter"}
-                            title="Get fitter"
+                            title="Vegetarian"
                             onClick={() => handleConfirm("Get fitter")}>
-                    Stay in shape and feel great
+                    I avoid meat and fish
                 </CardButton>
                 <CardButton type="button"
-                            icon={strnger}
+                            icon={avacado}
                             isActive={currentGoal==="Get strong"}
-                            title="Get strong"
+                            title="Keto (Low Carb)"
                             onClick={() => handleConfirm("Get strong")}>
-                    Stay in shape and feel great
+                    I like low-carb meals for fast metabolism
                 </CardButton>
             </QuestList>
         </div>

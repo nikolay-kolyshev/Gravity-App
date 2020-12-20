@@ -1,6 +1,7 @@
 import styled from "styled-components"
+import Div100vh from "react-div-100vh";
 
-export const LayoutOuter = styled.div`
+export const LayoutOuter = styled(Div100vh)`
   background-color: #F8F8F8;
   width: 100%;
   display: flex;
@@ -10,7 +11,7 @@ export const LayoutOuter = styled.div`
 
 export const LayoutInner = styled.main`
   background-color: ${({theme}) => theme.colors.background};
-  min-height: 100vh;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;

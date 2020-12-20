@@ -1,9 +1,12 @@
 import React from "react"
-import {InputBoxStyled} from "./inputBoxStyled";
+import {InputBoxStyled, InputBoxStyledInner} from "./inputBoxStyled";
 
-export default props => (
-    <InputBoxStyled
-        autoFocus
-        {...props}
-    />
-)
+export default ({postfix , ...restProps}) => {
+    return <InputBoxStyled postfix={postfix}>
+        <InputBoxStyledInner
+            autoFocus
+            {...restProps}
+        />
+    </InputBoxStyled>
+
+}

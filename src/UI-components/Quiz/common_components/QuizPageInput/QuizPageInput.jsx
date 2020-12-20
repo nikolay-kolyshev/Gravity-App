@@ -1,0 +1,49 @@
+import React, {useEffect} from 'react'
+import {TypographyTitle} from "../../../../styles/common-components/Typography-styled";
+import {Button} from "../../../common/Buttons/Button";
+import {useToasts} from 'react-toast-notifications'
+import {ButtonWrapper, QuizPageInputStyled} from "./QuizPageInput-styled";
+import InputBox from "../../../common/InputBox/InputBox";
+
+export default ({setFieldValue, handlePageNext, error, currentValue, currentKey, handleChange, title, inputConfig}) => {
+
+    const handleConfirm = value => {
+        setFieldValue([currentKey], value)
+        handlePageNext()
+    }
+
+    useEffect(() => {
+        if (!!error)
+            addToast(error, {
+                appearance: 'error',
+                autoDismiss: true,
+            })
+    }, [error])
+
+    const { addToast } = useToasts()
+
+    return (
+            <QuizPageInputStyled>
+                <TypographyTitle align="center" style={{marginTop:"20px",marginBottom:"60px"}}>
+                    {title}
+                </TypographyTitle>
+                <InputBox
+                    name={currentKey}
+                    value={currentValue}
+                    onChange={handleChange}
+                    {...inputConfig}
+                />
+                <ButtonWrapper>
+                    <Button
+                        type="button"
+                        isActive={!error}
+                        onClick={() => handlePageNext()}
+                    >
+                        Next
+                    </Button>
+                </ButtonWrapper>
+            </QuizPageInputStyled>
+    )
+
+}
+

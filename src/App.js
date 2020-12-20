@@ -6,16 +6,19 @@ import {mainTheme} from "./styles/themes"
 import {ThemeProvider} from "styled-components"
 import {LayoutInner, LayoutOuter} from "./styles/common-components/Layout";
 import Routes from "./UI-components/Routes/Routes";
-import Input from './UI-components/common/InputBox/InputBox'
+import { ToastProvider } from 'react-toast-notifications'
+
 const App = () => {
     return (
         <ThemeProvider theme={mainTheme}>
-            <GlobalStyle/>
-            <LayoutOuter>
-                <LayoutInner>
-                   <Routes/>
-                </LayoutInner>
-            </LayoutOuter>
+            <ToastProvider>
+                <GlobalStyle/>
+                <LayoutOuter>
+                    <LayoutInner>
+                        <Routes/>
+                    </LayoutInner>
+                </LayoutOuter>
+            </ToastProvider>
         </ThemeProvider>
     )
 }

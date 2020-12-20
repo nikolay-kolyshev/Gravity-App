@@ -1,6 +1,30 @@
-import styled, {css} from 'styled-components'
+import styled from 'styled-components'
 
-export const InputBoxStyled = styled.input`
+export const InputBoxStyled = styled.div`
+    display: inline-block;
+    position: relative;
+    
+    &:after{
+      position: absolute;
+      top: 2px;
+      right: .5em;
+      transition: all .05s ease-in-out;
+      content: "${({postfix}) => !!postfix ? postfix : ""}";
+    }
+    
+    &:hover:after,
+    &:focus-within:after {
+      right: 1.5em;
+    }
+    
+    @supports (-moz-appearance:none) {
+      &:after {
+        right: 1.5em;
+      }
+    }
+`
+
+export const InputBoxStyledInner = styled.input`
     width:264px;
     font-size:56px;
     display: block;
@@ -12,6 +36,6 @@ export const InputBoxStyled = styled.input`
       border-bottom: solid 2px ${({theme}) => theme.colors.primary};
     }
     &:focus{
-       border-bottom: solid 2px ${({theme}) => theme.colors.primary}
+       border-bottom: solid 2px ${({theme}) => theme.colors.primary};
     }
 `

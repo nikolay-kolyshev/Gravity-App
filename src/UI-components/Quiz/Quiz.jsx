@@ -1,11 +1,14 @@
 import React, {useState} from "react"
 import QuizGender from "./components/QuizGenderLayout/QuizGender";
 import {Form, Formik} from "formik";
-import QuizGoal from "./components/QuizGoal/QuizGoal";
 import QuizMotivation from "./components/QuizMotivation/QuizMotivation";
-import QuizAge from "./components/QuizAge/QuizAge"
 import FormFieldLayout from "./common_components/FormFieldLayout/FormFieldLayout";
 import * as Yup from "yup";
+import withInputField from "./HOC/withInputField";
+import QuizGoal from "./components/QuizGoal/QuizGoal";
+import QuizDietType from "./components/QuizDietType/QuizDietType";
+import Progress from 'react-progressbar';
+import {ProgressStyled} from "./Quiz-styled";
 
 export default () => {
 
@@ -13,14 +16,49 @@ export default () => {
         ["gender", QuizGender],
         ["goal", QuizGoal],
         ["motivation", QuizMotivation],
-        ["age", QuizAge]
+        ["age", withInputField(
+            "How old are you?",
+            {
+                type: "number",
+                min: 18,
+                max: 90
+            }
+        )],
+        ["height", withInputField(
+            "Your height",
+            {
+                type: "number",
+                min: 54,
+                max: 300,
+                postfix: "sm"
+            }
+        )],
+        ["currentWeight", withInputField(
+            "Your current weight",
+            {
+                type: "number",
+                min: 15,
+                max: 500,
+                postfix: "sm"
+            }
+        )],
+        ["goalWeight", withInputField(
+            "Your goal weight",
+            {
+                type: "number",
+                min: 15,
+                max: 500,
+                postfix: "sm"
+            }
+        )],
+        ["dietType", QuizDietType]
     ]
 
     const [fieldsComponentsState, setFieldsComponentsState] = useState(fieldsComponents.reduce(
         (currObj, [key, value]) => (
             {
                 ...currObj,
-                [key]: key === "age"
+                [key]: key === "height"
             }
     ), {}))
 
@@ -30,6 +68,18 @@ export default () => {
 
     const validationSchema = Yup.object({
         age: Yup.number()
+            .required("Вы не ввели возраст!")
+            .integer()
+            .truncate(),
+        height: Yup.number()
+            .required("Вы не ввели возраст!")
+            .integer()
+            .truncate(),
+        currentWeight: Yup.number()
+            .required("Вы не ввели возраст!")
+            .integer()
+            .truncate(),
+        goalWeight: Yup.number()
             .required("Вы не ввели возраст!")
             .integer()
             .truncate()
@@ -42,7 +92,10 @@ export default () => {
                 gender: null,
                 goal: null,
                 motivation: null,
-                age: 18
+                age: 18,
+                height: 54,
+                currentWeight: 15,
+                goalWeight: 15
             }}
             onSubmit={confirmSubmit}
             disabled={true}
@@ -87,8 +140,13 @@ export default () => {
                         return fieldsComponentsLayout[fieldKey]
                     }
 
+                // TODO: fix problem of division by zero
                 return (
                     <Form onSubmit={handleSubmit} style={{width: "100%"}}>
+                        <ProgressStyled
+                            completed={Object.values(fieldsComponentsState).indexOf(true) * 100 / (fieldsComponents.length - 1)}
+                            style={{margin: "-19px -16px 9px"}}
+                        />
                         {showFieldsComponents()}
                         <button type="submit">Submit</button>
                     </Form>

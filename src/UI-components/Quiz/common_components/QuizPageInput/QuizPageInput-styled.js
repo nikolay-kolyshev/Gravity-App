@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const QuizAgeStyled = styled.div`
+export const QuizPageInputStyled = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
