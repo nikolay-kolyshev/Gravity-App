@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Gravity-App/static/css/main.424c7103.chunk.css",
-    "main.js": "/Gravity-App/static/js/main.3402cb2d.chunk.js",
-    "main.js.map": "/Gravity-App/static/js/main.3402cb2d.chunk.js.map",
+    "main.js": "/Gravity-App/static/js/main.b78addec.chunk.js",
+    "main.js.map": "/Gravity-App/static/js/main.b78addec.chunk.js.map",
     "runtime-main.js": "/Gravity-App/static/js/runtime-main.a314fe7f.js",
     "runtime-main.js.map": "/Gravity-App/static/js/runtime-main.a314fe7f.js.map",
     "static/css/2.679831fc.chunk.css": "/Gravity-App/static/css/2.679831fc.chunk.css",
@@ -25,6 +25,6 @@
     "static/css/2.679831fc.chunk.css",
     "static/js/2.68625a29.chunk.js",
     "static/css/main.424c7103.chunk.css",
-    "static/js/main.3402cb2d.chunk.js"
+    "static/js/main.b78addec.chunk.js"
   ]
 }
