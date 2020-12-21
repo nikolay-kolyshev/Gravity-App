@@ -80,7 +80,7 @@ export default () => (
                     <CardButton isActive={true} title="Keto (Low Carb)" icon={avocadoIcon}>
                         I like low-carb meals for fast metabolism
                     </CardButton>
-                </QuestList>
+            </QuestList>
             <QuestList horizontalGap={true}>
                     <CardButton ContentWrapper={true} >
                         Спина, поясница

@@ -8,5 +8,4 @@ export default ({postfix , ...restProps}) => {
             {...restProps}
         />
     </InputBoxStyled>
-
 }

@@ -6,6 +6,7 @@ export const TypographyStyles = css`
 
 export const Typography = styled.p`
   ${TypographyStyles}
+  ${({align}) => !!align && `text-align: ${align}`};
 `
 
 export const TypographyHGroup = styled.hgroup`

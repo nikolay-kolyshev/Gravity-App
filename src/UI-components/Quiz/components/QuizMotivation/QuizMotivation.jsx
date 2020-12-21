@@ -1,10 +1,7 @@
 import React from 'react'
-import SuperGirl from '../../../../assets/images/icons/superGirl.png'
-import Tango from '../../../../assets/images/icons/Tango.png'
-import Devil from '../../../../assets/images/icons/Devil.png'
-import Health from '../../../../assets/images/icons/Health.png'
 import {TypographyTitle} from "../../../../styles/common-components/Typography-styled";
 import {CardButton, QuestList} from "../../../common/Cards/Cards";
+import {ICON_SMILLING_EVIL, ICON_UMBRELLA, ICON_WOMAN_DANCING, ICON_WOMAN_SUPERHERO} from "../../../../constans/icons";
 
 export default ({setFieldValue, currentValue, handlePageNext, currentKey}) => {
 
@@ -15,33 +12,33 @@ export default ({setFieldValue, currentValue, handlePageNext, currentKey}) => {
 
     return (
         <div>
-            <TypographyTitle align="center" style={{marginTop:"20px",marginBottom:"60px"}}>
+            <TypographyTitle align="center" style={{marginTop:"20px",marginBottom:"40px"}}>
                 What motivates you the most
             </TypographyTitle>
             <QuestList>
                 <CardButton type="button"
-                            icon={SuperGirl}
+                            icon={ICON_WOMAN_SUPERHERO}
                             isActive={currentValue === "Feeling Confident"}
                             title="Feeling Confident"
                             onClick={() => handleConfirm("Feeling Confident")}>
                     I want to look and feel my best
                 </CardButton>
                 <CardButton type="button"
-                            icon={Tango}
+                            icon={ICON_WOMAN_DANCING}
                             isActive={currentValue === "Looking Amazing"}
                             title="Looking Amazing"
                             onClick={() => handleConfirm("Looking Amazing")}>
                     I want to turn heads at an event
                 </CardButton>
                 <CardButton type="button"
-                            icon={Devil}
+                            icon={ICON_SMILLING_EVIL}
                             isActive={currentValue === "Getting Revenge"}
                             title="Getting Revenge"
                             onClick={() => handleConfirm("Getting Revenge")}>
                     I want my ex to regret losing me
                 </CardButton>
                 <CardButton type="button"
-                            icon={Health}
+                            icon={ICON_UMBRELLA}
                             isActive={currentValue === "Improving Health"}
                             title="Improving Health"
                             onClick={() => handleConfirm("Improving Health")}>

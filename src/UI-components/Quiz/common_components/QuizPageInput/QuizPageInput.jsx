@@ -2,15 +2,11 @@ import React, {useEffect} from 'react'
 import {TypographyTitle} from "../../../../styles/common-components/Typography-styled";
 import {Button} from "../../../common/Buttons/Button";
 import {useToasts} from 'react-toast-notifications'
-import {ButtonWrapper, QuizPageInputStyled} from "./QuizPageInput-styled";
+import {QuizPageInputStyled} from "./QuizPageInput-styled";
 import InputBox from "../../../common/InputBox/InputBox";
+import {ButtonWrapper} from "../../Quiz-styled";
 
-export default ({setFieldValue, handlePageNext, error, currentValue, currentKey, handleChange, title, inputConfig}) => {
-
-    const handleConfirm = value => {
-        setFieldValue([currentKey], value)
-        handlePageNext()
-    }
+export default ({handlePageNext, error, currentValue, currentKey, handleChange, title, inputConfig}) => {
 
     useEffect(() => {
         if (!!error)

@@ -1,7 +1,7 @@
 import React from 'react'
-import {TypographyTitle} from "../../../../styles/common-components/Typography-styled";
+import {TypographyTitle, TypographyСlassified} from "../../../../styles/common-components/Typography-styled";
 import {CardButton, QuestList} from "../../../common/Cards/Cards";
-import {ICON_AVACADO, ICON_BROCCOLI, ICON_OK_HAND} from "../../../../constans/icons";
+import {ICON_APPLE, ICON_BORSCH, ICON_CRUASAN, ICON_EGGS, ICON_SUP} from "../../../../constans/icons";
 
 export default ({setFieldValue, currentValue, handlePageNext, currentKey}) => {
 
@@ -10,28 +10,36 @@ export default ({setFieldValue, currentValue, handlePageNext, currentKey}) => {
         handlePageNext()
     }
 
+    const emojiArray = [
+        ICON_EGGS,
+        ICON_CRUASAN,
+        ICON_APPLE,
+        ICON_BORSCH,
+        ICON_SUP
+    ]
+
     return (
         <div>
             <TypographyTitle style={{marginTop:"20px",marginBottom:"40px"}} align="center">
-                Choose your diet type
+                How many times a day do you prefer to eat?
             </TypographyTitle>
             <QuestList>
                 <CardButton type="button"
-                            icon={ICON_OK_HAND}
+                            emojiArray={emojiArray}
                             isActive={currentValue==="Lose Weight"}
                             title="No Preference"
                             onClick={() => handleConfirm("Lose Weight")}>
                     I enjoy everything
                 </CardButton>
                 <CardButton type="button"
-                            icon={ICON_BROCCOLI}
+                            emojiArray={emojiArray.slice(0, 3)}
                             isActive={currentValue==="Get fitter"}
                             title="Vegetarian"
                             onClick={() => handleConfirm("Get fitter")}>
                     I avoid meat and fish
                 </CardButton>
                 <CardButton type="button"
-                            icon={ICON_AVACADO}
+                            emojiArray={emojiArray.slice(0, 2)}
                             isActive={currentValue==="Get strong"}
                             title="Keto (Low Carb)"
                             onClick={() => handleConfirm("Get strong")}>

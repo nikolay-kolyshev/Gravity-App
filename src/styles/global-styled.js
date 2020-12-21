@@ -37,6 +37,7 @@ const GlobalStyle = createGlobalStyle`
       padding: 0;
       margin: 0;
       font-family: ${({theme}) => theme.font.family};
+      line-height: 19px;
       color: ${({theme}) => theme.colors.text};
     }
     

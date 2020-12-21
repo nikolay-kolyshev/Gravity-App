@@ -33,7 +33,7 @@ export default ({handlePageNext, setFieldValue, currentValue, currentKey}) => {
                     Получите ваш персональный план по снижению веса
                 </TypographyTitle>
             </TypographyHGroup>
-            <TypographyСlassified style={{marginBottom: "31px",textAlign:"center"}}>
+            <TypographyСlassified style={{marginBottom: "31px"}} align="center">
                 Выберите ваш пол
             </TypographyСlassified>
             <LayoutFlex width="100%" heigth="100%">

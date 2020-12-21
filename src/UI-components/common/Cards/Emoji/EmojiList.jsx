@@ -5,7 +5,7 @@ import {Picture} from "../../Picture/Picture";
 export const EmojiList = ({emojiArray}) =>(
     <EmojiListStyled>
         {emojiArray.map(function(child){
-            return(<Picture style={{maxHeigth:"32px",maxWidth:"32px"}} icon={child}/>)})
+            return(<Picture style={{maxHeigth:"32px",maxWidth:"32px", marginRight: "8px"}} icon={child}/>)})
         }
     </EmojiListStyled>
 )

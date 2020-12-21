@@ -4,7 +4,6 @@ import {Picture} from "../Picture/Picture";
 import {ImageInDiv} from "../../../styles/common-components/Images";
 
 export const Card = css`
-     
      border-radius: 7px;
      display: flex;
      align-items: center;
@@ -13,20 +12,17 @@ export const Card = css`
      padding: 20px 15px;
 `
 export const CardButtonStyled = styled.button`
-     ${Card}
+     ${Card};
      justify-content: space-between;
-     div{
-        display:flex;
-        
-     }
-     
      ${({width,ContentWrapper}) => (!ContentWrapper) && (width ? `width:${width}`:`width:100%`)};
-     padding: ${({icon}) =>(!icon) && '20px 20px'};
+     ${({isSimple}) => isSimple && "padding: 10px 15px"};
      border: ${ ({isActive}) => (isActive) ? '2px solid #27DC8F' : '2px solid #E0E0E0'};
      &:hover {
         border: 2px solid ${({theme}) => theme.colors.primary};
      }
-     
+     div{
+        display:flex;
+     }
 `
 export const CardButtonGenderStyled = styled(CardButtonStyled)`
      width: 100%;
@@ -67,24 +63,24 @@ export const TitleWrapper = styled.div`
 `
 
 export const ImageGenderWrapper = styled.div`
-    
-        width: 100%;
-        position: absolute;
-        bottom: 56px;
-    
+    position: absolute;
+    bottom: 56px;
+    height: 224px;
+    width: 100%;
+    display: flex;
+    justify-content: center;: center;
     img {
-      ${ImageInDiv}
+      display: block;
     }
 `
 export const CardListStyled = styled.div`
-     width:inherit;
-     display:flex;
-     flex-wrap:wrap;
-     justify-content:center;
+     width: inherit;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
      button{
         margin-bottom: 9px;
         margin-left: ${({horizontalGap}) => horizontalGap && `7px`};
         margin-right: ${({horizontalGap}) => horizontalGap && `7px`};
      }
-     
 `

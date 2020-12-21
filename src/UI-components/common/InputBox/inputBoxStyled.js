@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
 export const InputBoxStyled = styled.div`
+    width: 100%;
+    padding: 0 54px;
     display: inline-block;
     position: relative;
     
@@ -25,8 +27,8 @@ export const InputBoxStyled = styled.div`
 `
 
 export const InputBoxStyledInner = styled.input`
-    width:264px;
-    font-size:56px;
+    width: 100%;
+    font-size: 56px;
     display: block;
     text-align:center;
     text-decoration: none;

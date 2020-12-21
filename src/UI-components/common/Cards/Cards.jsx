@@ -14,30 +14,29 @@ import femalePhoto from "../../../../src/assets/images/other/female.png"
 import {LayoutFlex} from "../../../styles/common-components/Layout";
 import {TypographyTitle} from "../../../styles/common-components/Typography-styled";
 
-export const CardButton = ({ContentWrapper,isActive, icon, title, emojiArray, children, ...restProps}) => (
-    <CardButtonStyled ContentWrapper={ContentWrapper} isActive={isActive} icon={icon} {...restProps}>
-
+export const CardButton = ({ContentWrapper, isActive, icon, title, emojiArray, children, ...restProps}) => (
+    <CardButtonStyled ContentWrapper={ContentWrapper} isActive={isActive} icon={icon} isSimple={!icon && !emojiArray} {...restProps}>
         <div>
             {icon && (<IconStyled size={32} icon={icon}/>)}
             <hgroup>
                 <Title>{title}</Title>
-                <div style={{width:"240px"}}>
+                <div>
                     {children}
                 </div>
-                <div style={{width:"240px"}}>
+                <div>
                     {!!emojiArray && <EmojiList emojiArray={emojiArray}/>}
                 </div>
             </hgroup>
         </div>
         <div>
-            {isActive  && (<IsActivePictureStyled icon={CheckmarkSmall}/>)}
+            {isActive && (!!icon || !!emojiArray) && (<IsActivePictureStyled icon={CheckmarkSmall}/>)}
         </div>
-
     </CardButtonStyled>
 )
 
 export const CardButtonGender = ({isActive, icon, title, emojiArray, gender, ...restProps}) => (
     <CardButtonGenderStyled isActive={isActive} icon={icon} {...restProps}>
+        {isActive && (<IsActivePictureStyled icon={CheckmarkSmall}/>)}
         <div style={{padding: "20px 15px 0 15px"}}>
             {isActive && (<IsActivePictureStyled icon={CheckmarkSmall}/>)}
         </div>

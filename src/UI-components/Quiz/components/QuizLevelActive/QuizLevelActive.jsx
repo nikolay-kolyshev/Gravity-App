@@ -1,7 +1,7 @@
 import React from 'react'
 import {TypographyTitle} from "../../../../styles/common-components/Typography-styled";
 import {CardButton, QuestList} from "../../../common/Cards/Cards";
-import {ICON_AVACADO, ICON_BROCCOLI, ICON_OK_HAND} from "../../../../constans/icons";
+import {ICON_RABBIT, ICON_SLOTH, ICON_TIGER} from "../../../../constans/icons";
 
 export default ({setFieldValue, currentValue, handlePageNext, currentKey}) => {
 
@@ -13,29 +13,29 @@ export default ({setFieldValue, currentValue, handlePageNext, currentKey}) => {
     return (
         <div>
             <TypographyTitle style={{marginTop:"20px",marginBottom:"40px"}} align="center">
-                Choose your diet type
+                Какой твой уровень активности?
             </TypographyTitle>
             <QuestList>
                 <CardButton type="button"
-                            icon={ICON_OK_HAND}
+                            icon={ICON_SLOTH}
                             isActive={currentValue==="Lose Weight"}
-                            title="No Preference"
+                            title="Не активный"
                             onClick={() => handleConfirm("Lose Weight")}>
-                    I enjoy everything
+                    Большую часть дня провожу сидя
                 </CardButton>
                 <CardButton type="button"
-                            icon={ICON_BROCCOLI}
+                            icon={ICON_RABBIT}
                             isActive={currentValue==="Get fitter"}
-                            title="Vegetarian"
+                            title="Get fitter"
                             onClick={() => handleConfirm("Get fitter")}>
-                    I avoid meat and fish
+                    Прогуливаюсь несколько раз в день
                 </CardButton>
                 <CardButton type="button"
-                            icon={ICON_AVACADO}
+                            icon={ICON_TIGER}
                             isActive={currentValue==="Get strong"}
-                            title="Keto (Low Carb)"
+                            title="Get strong"
                             onClick={() => handleConfirm("Get strong")}>
-                    I like low-carb meals for fast metabolism
+                    Тренируюсь несколько раз в неделю
                 </CardButton>
             </QuestList>
         </div>

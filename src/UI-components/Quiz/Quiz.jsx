@@ -7,8 +7,12 @@ import * as Yup from "yup";
 import withInputField from "./HOC/withInputField";
 import QuizGoal from "./components/QuizGoal/QuizGoal";
 import QuizDietType from "./components/QuizDietType/QuizDietType";
-import Progress from 'react-progressbar';
 import {ProgressStyled} from "./Quiz-styled";
+import QuizTimesDayEat from "./components/QuizTimesDayEat/QuizTimesDayEat";
+import QuizLevelActive from "./components/QuizLevelActive/QuizLevelActive";
+import QuizHardWork from "./components/QuizHardWork/QuizHardWork";
+import QuizInjuries from "./components/QuizInjuries/QuizInjuries";
+import QuizEmail from "./components/QuizEmail/QuizEmail";
 
 export default () => {
 
@@ -39,7 +43,7 @@ export default () => {
                 type: "number",
                 min: 15,
                 max: 500,
-                postfix: "sm"
+                postfix: "kg"
             }
         )],
         ["goalWeight", withInputField(
@@ -48,17 +52,22 @@ export default () => {
                 type: "number",
                 min: 15,
                 max: 500,
-                postfix: "sm"
+                postfix: "kg"
             }
         )],
-        ["dietType", QuizDietType]
+        ["dietType", QuizDietType],
+        ["timesDayEat", QuizTimesDayEat],
+        ["levelActive", QuizLevelActive],
+        ["injuries", QuizInjuries],
+        ["hardWork", QuizHardWork],
+        ["email", QuizEmail],
     ]
 
     const [fieldsComponentsState, setFieldsComponentsState] = useState(fieldsComponents.reduce(
         (currObj, [key, value]) => (
             {
                 ...currObj,
-                [key]: key === "height"
+                [key]: key === "email"
             }
     ), {}))
 
@@ -67,22 +76,31 @@ export default () => {
     }
 
     const validationSchema = Yup.object({
+
         age: Yup.number()
             .required("Вы не ввели возраст!")
             .integer()
             .truncate(),
+
         height: Yup.number()
             .required("Вы не ввели возраст!")
             .integer()
             .truncate(),
+
         currentWeight: Yup.number()
             .required("Вы не ввели возраст!")
             .integer()
             .truncate(),
+
         goalWeight: Yup.number()
-            .required("Вы не ввели возраст!")
+            .required("Вы не ввели вес!")
             .integer()
-            .truncate()
+            .truncate(),
+
+        email: Yup.string()
+            .required("Вы не ввели возраст!")
+            .email("Не корректный email!")
+
     })
 
     return (
@@ -95,7 +113,13 @@ export default () => {
                 age: 18,
                 height: 54,
                 currentWeight: 15,
-                goalWeight: 15
+                goalWeight: 15,
+                dietType: null,
+                timesDayEat: null,
+                levelActive: null,
+                injuries: [],
+                hardWork: null,
+                email: null
             }}
             onSubmit={confirmSubmit}
             disabled={true}
