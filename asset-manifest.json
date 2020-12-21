@@ -1,30 +1,40 @@
 {
   "files": {
     "main.css": "/Gravity-App/static/css/main.424c7103.chunk.css",
-    "main.js": "/Gravity-App/static/js/main.b78addec.chunk.js",
-    "main.js.map": "/Gravity-App/static/js/main.b78addec.chunk.js.map",
+    "main.js": "/Gravity-App/static/js/main.ed2716af.chunk.js",
+    "main.js.map": "/Gravity-App/static/js/main.ed2716af.chunk.js.map",
     "runtime-main.js": "/Gravity-App/static/js/runtime-main.a314fe7f.js",
     "runtime-main.js.map": "/Gravity-App/static/js/runtime-main.a314fe7f.js.map",
     "static/css/2.679831fc.chunk.css": "/Gravity-App/static/css/2.679831fc.chunk.css",
-    "static/js/2.68625a29.chunk.js": "/Gravity-App/static/js/2.68625a29.chunk.js",
-    "static/js/2.68625a29.chunk.js.map": "/Gravity-App/static/js/2.68625a29.chunk.js.map",
+    "static/js/2.79997bf4.chunk.js": "/Gravity-App/static/js/2.79997bf4.chunk.js",
+    "static/js/2.79997bf4.chunk.js.map": "/Gravity-App/static/js/2.79997bf4.chunk.js.map",
     "index.html": "/Gravity-App/index.html",
     "static/css/2.679831fc.chunk.css.map": "/Gravity-App/static/css/2.679831fc.chunk.css.map",
     "static/css/main.424c7103.chunk.css.map": "/Gravity-App/static/css/main.424c7103.chunk.css.map",
-    "static/js/2.68625a29.chunk.js.LICENSE.txt": "/Gravity-App/static/js/2.68625a29.chunk.js.LICENSE.txt",
-    "static/media/Devil.62f3f2e7.png": "/Gravity-App/static/media/Devil.62f3f2e7.png",
-    "static/media/Tango.a13abc47.png": "/Gravity-App/static/media/Tango.a13abc47.png",
+    "static/js/2.79997bf4.chunk.js.LICENSE.txt": "/Gravity-App/static/js/2.79997bf4.chunk.js.LICENSE.txt",
     "static/media/apple.b850ea73.png": "/Gravity-App/static/media/apple.b850ea73.png",
+    "static/media/broccoli.9f26749e.png": "/Gravity-App/static/media/broccoli.9f26749e.png",
+    "static/media/cruasan.f290fabc.png": "/Gravity-App/static/media/cruasan.f290fabc.png",
+    "static/media/email.f296e753.png": "/Gravity-App/static/media/email.f296e753.png",
     "static/media/female.adf2593a.png": "/Gravity-App/static/media/female.adf2593a.png",
+    "static/media/fire.77e3af07.png": "/Gravity-App/static/media/fire.77e3af07.png",
+    "static/media/heart_eyes.76853a5c.png": "/Gravity-App/static/media/heart_eyes.76853a5c.png",
     "static/media/logo.ed475409.svg": "/Gravity-App/static/media/logo.ed475409.svg",
     "static/media/male.1fb1e322.png": "/Gravity-App/static/media/male.1fb1e322.png",
-    "static/media/superGirl.a9588a2f.png": "/Gravity-App/static/media/superGirl.a9588a2f.png"
+    "static/media/nerd_face.0a4b3232.png": "/Gravity-App/static/media/nerd_face.0a4b3232.png",
+    "static/media/rabbit.a732f6cc.png": "/Gravity-App/static/media/rabbit.a732f6cc.png",
+    "static/media/sloth.2899e303.png": "/Gravity-App/static/media/sloth.2899e303.png",
+    "static/media/smilling_evil.62f3f2e7.png": "/Gravity-App/static/media/smilling_evil.62f3f2e7.png",
+    "static/media/sup.501bda0a.png": "/Gravity-App/static/media/sup.501bda0a.png",
+    "static/media/tiger.ccc8d778.png": "/Gravity-App/static/media/tiger.ccc8d778.png",
+    "static/media/woman_dancing.a13abc47.png": "/Gravity-App/static/media/woman_dancing.a13abc47.png",
+    "static/media/woman_superhero.a9588a2f.png": "/Gravity-App/static/media/woman_superhero.a9588a2f.png"
   },
   "entrypoints": [
     "static/js/runtime-main.a314fe7f.js",
     "static/css/2.679831fc.chunk.css",
-    "static/js/2.68625a29.chunk.js",
+    "static/js/2.79997bf4.chunk.js",
     "static/css/main.424c7103.chunk.css",
-    "static/js/main.b78addec.chunk.js"
+    "static/js/main.ed2716af.chunk.js"
   ]
 }
