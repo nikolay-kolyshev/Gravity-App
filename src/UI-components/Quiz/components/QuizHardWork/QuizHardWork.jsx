@@ -2,13 +2,28 @@ import React from 'react'
 import {TypographyTitle} from "../../../../styles/common-components/Typography-styled";
 import {CardButton, QuestList} from "../../../common/Cards/Cards";
 import {ICON_BITCEPS, ICON_NERD_FACE, ICON_SMILLING_EVIL} from "../../../../constans/icons";
+import {useProgressDisplayMode} from "../../hooks/useProgressDisplayMode";
+import QuizProgress from "../../common_components/QuizProgress/QuizProgress";
+
+const progressStringsArray = [
+    "Adapting the plan to your needs",
+    "Selecting suitable recipes",
+    "Yor personalized plan is ready!"
+]
+
+const durationStep = 1000
 
 export default ({setFieldValue, currentValue, handlePageNext, currentKey}) => {
 
+    const [progressDisplayMode, setProgressDisplayMode] = useProgressDisplayMode(progressStringsArray.length, durationStep, handlePageNext)
+
     const handleConfirm = value => {
         setFieldValue([currentKey], value)
-        handlePageNext()
+        setProgressDisplayMode(true)
     }
+
+    if (progressDisplayMode)
+        return <QuizProgress progressStringsArray={progressStringsArray} durationStep={durationStep} start={60} end={100}/>
 
     return (
         <div>

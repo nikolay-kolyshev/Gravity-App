@@ -15,7 +15,7 @@ export const LayoutInner = styled.main`
   flex-direction: column;
   align-items: center;
   padding: 19px 16px;
-  max-width: 700px;
+  max-width: 375px;
   width: 100%;
   height: 100%;
   position: relative;

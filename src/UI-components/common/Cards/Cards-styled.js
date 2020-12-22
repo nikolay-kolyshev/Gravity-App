@@ -16,7 +16,7 @@ export const CardButtonStyled = styled.button`
      justify-content: space-between;
      ${({width,ContentWrapper}) => (!ContentWrapper) && (width ? `width:${width}`:`width:100%`)};
      ${({isSimple}) => isSimple && "padding: 10px 15px"};
-     border: ${ ({isActive}) => (isActive) ? '2px solid #27DC8F' : '2px solid #E0E0E0'};
+     border: ${ ({isActive, theme}) => (isActive) ? `2px solid ${theme.colors.primary}` : '2px solid #E0E0E0'};
      &:hover {
         border: 2px solid ${({theme}) => theme.colors.primary};
      }
@@ -27,7 +27,7 @@ export const CardButtonStyled = styled.button`
 export const CardButtonGenderStyled = styled(CardButtonStyled)`
      width: 100%;
      height: 256px;
-     padding: 0;
+     padding: 10px 10px 0 10px;
      flex-direction: column;
      justify-content: space-between;
      align-items: flex-start;
@@ -64,9 +64,8 @@ export const TitleWrapper = styled.div`
 
 export const ImageGenderWrapper = styled.div`
     position: absolute;
+    left: 0;
     bottom: 56px;
-    height: 224px;
-    width: 100%;
     display: flex;
     justify-content: center;: center;
     img {

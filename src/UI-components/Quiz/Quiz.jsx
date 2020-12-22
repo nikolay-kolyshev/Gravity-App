@@ -67,7 +67,7 @@ export default () => {
         (currObj, [key, value]) => (
             {
                 ...currObj,
-                [key]: key === "email"
+                [key]: key === "injuries"
             }
     ), {}))
 

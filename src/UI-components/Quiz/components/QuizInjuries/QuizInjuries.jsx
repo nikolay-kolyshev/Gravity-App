@@ -1,20 +1,33 @@
-import React, {useState} from 'react'
+import React from 'react'
 import {Typography, TypographyTitle} from "../../../../styles/common-components/Typography-styled";
 import {CardButton, QuestList} from "../../../common/Cards/Cards";
 import {Button} from "../../../common/Buttons/Button";
 import {ButtonWrapper} from "../../Quiz-styled";
 import useQuizInjuriesValues from "../../hooks/useQuizInjuriesValues";
+import {useProgressDisplayMode} from "../../hooks/useProgressDisplayMode";
+import QuizProgress from "../../common_components/QuizProgress/QuizProgress";
+
+const progressStringsArray = [
+    "Analyxing your dietary profile",
+    "Estimating your metabolic age",
+    "Adapting the plan to your needs",
+    "Selecting suitebla recipes",
+    "Your personalized plan is ready!"
+]
+
+const durationStep = 1000
 
 export default ({setFieldValue, currentValue, handlePageNext, currentKey, error}) => {
 
     const [valuesMap, setValuesMap] = useQuizInjuriesValues(currentValue)
+    const [progressDisplayMode, setProgressDisplayMode] = useProgressDisplayMode(progressStringsArray.length, durationStep, handlePageNext)
 
     const handleConfirm = () => {
         const newFieldValue = Object.keys(Object.fromEntries(valuesMap)).filter(
             item => valuesMap.get(item)
         )
         setFieldValue([currentKey], newFieldValue)
-        handlePageNext()
+        setProgressDisplayMode(true)
     }
 
     const handleSelect = currentKey => {
@@ -33,6 +46,9 @@ export default ({setFieldValue, currentValue, handlePageNext, currentKey, error}
             </CardButton>
         )
     )
+
+    if (progressDisplayMode)
+        return <QuizProgress progressStringsArray={progressStringsArray} durationStep={durationStep} start={0} end={60}/>
 
     return (
         <div>

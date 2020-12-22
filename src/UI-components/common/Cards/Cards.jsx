@@ -7,7 +7,7 @@ import {
     IsActivePictureStyled,
     Title, TitleWrapper,
 } from "./Cards-styled";
-import CheckmarkSmall from './../../../assets/images/other/Checkmark_small.png';
+import CheckmarkSmall from './../../../assets/images/other/Checkmark_small.svg';
 import {EmojiList} from "./Emoji/EmojiList";
 import malePhoto from "../../../../src/assets/images/other/male.png"
 import femalePhoto from "../../../../src/assets/images/other/female.png"
@@ -36,14 +36,13 @@ export const CardButton = ({ContentWrapper, isActive, icon, title, emojiArray, c
 
 export const CardButtonGender = ({isActive, icon, title, emojiArray, gender, ...restProps}) => (
     <CardButtonGenderStyled isActive={isActive} icon={icon} {...restProps}>
-        {isActive && (<IsActivePictureStyled icon={CheckmarkSmall}/>)}
-        <div style={{padding: "20px 15px 0 15px"}}>
+        <div>
             {isActive && (<IsActivePictureStyled icon={CheckmarkSmall}/>)}
         </div>
         <ImageGenderWrapper>
             <img src={gender === "female" ? femalePhoto : malePhoto}/>
         </ImageGenderWrapper>
-        <TitleWrapper  >
+        <TitleWrapper>
             <LayoutFlex width="100%" height="100%" horizontalCenter={true} verticalCenter={true}>
                 <Title>{title}</Title>
             </LayoutFlex>

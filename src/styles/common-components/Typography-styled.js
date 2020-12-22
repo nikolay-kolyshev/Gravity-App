@@ -19,6 +19,9 @@ export const TypographyTitle = styled.h1`
   line-height: 33px;
   letter-spacing: -0.05em;
   ${({align}) => !!align && `text-align: ${align}`};
+  span {
+    font-size: ${({spanSize}) => spanSize + "px" || "inherit"};
+  }
 `
 
 export const TypographySupTitle = styled.h2`
