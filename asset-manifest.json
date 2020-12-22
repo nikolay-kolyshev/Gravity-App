@@ -1,17 +1,18 @@
 {
   "files": {
     "main.css": "/Gravity-App/static/css/main.424c7103.chunk.css",
-    "main.js": "/Gravity-App/static/js/main.fc331f19.chunk.js",
-    "main.js.map": "/Gravity-App/static/js/main.fc331f19.chunk.js.map",
+    "main.js": "/Gravity-App/static/js/main.8214aff4.chunk.js",
+    "main.js.map": "/Gravity-App/static/js/main.8214aff4.chunk.js.map",
     "runtime-main.js": "/Gravity-App/static/js/runtime-main.a314fe7f.js",
     "runtime-main.js.map": "/Gravity-App/static/js/runtime-main.a314fe7f.js.map",
-    "static/css/2.679831fc.chunk.css": "/Gravity-App/static/css/2.679831fc.chunk.css",
-    "static/js/2.79997bf4.chunk.js": "/Gravity-App/static/js/2.79997bf4.chunk.js",
-    "static/js/2.79997bf4.chunk.js.map": "/Gravity-App/static/js/2.79997bf4.chunk.js.map",
+    "static/css/2.740103e8.chunk.css": "/Gravity-App/static/css/2.740103e8.chunk.css",
+    "static/js/2.802ada04.chunk.js": "/Gravity-App/static/js/2.802ada04.chunk.js",
+    "static/js/2.802ada04.chunk.js.map": "/Gravity-App/static/js/2.802ada04.chunk.js.map",
     "index.html": "/Gravity-App/index.html",
-    "static/css/2.679831fc.chunk.css.map": "/Gravity-App/static/css/2.679831fc.chunk.css.map",
+    "static/css/2.740103e8.chunk.css.map": "/Gravity-App/static/css/2.740103e8.chunk.css.map",
     "static/css/main.424c7103.chunk.css.map": "/Gravity-App/static/css/main.424c7103.chunk.css.map",
-    "static/js/2.79997bf4.chunk.js.LICENSE.txt": "/Gravity-App/static/js/2.79997bf4.chunk.js.LICENSE.txt",
+    "static/js/2.802ada04.chunk.js.LICENSE.txt": "/Gravity-App/static/js/2.802ada04.chunk.js.LICENSE.txt",
+    "static/media/Checkmark_small.567b4c2a.svg": "/Gravity-App/static/media/Checkmark_small.567b4c2a.svg",
     "static/media/apple.b850ea73.png": "/Gravity-App/static/media/apple.b850ea73.png",
     "static/media/broccoli.9f26749e.png": "/Gravity-App/static/media/broccoli.9f26749e.png",
     "static/media/cruasan.f290fabc.png": "/Gravity-App/static/media/cruasan.f290fabc.png",
@@ -32,9 +33,9 @@
   },
   "entrypoints": [
     "static/js/runtime-main.a314fe7f.js",
-    "static/css/2.679831fc.chunk.css",
-    "static/js/2.79997bf4.chunk.js",
+    "static/css/2.740103e8.chunk.css",
+    "static/js/2.802ada04.chunk.js",
     "static/css/main.424c7103.chunk.css",
-    "static/js/main.fc331f19.chunk.js"
+    "static/js/main.8214aff4.chunk.js"
   ]
 }
