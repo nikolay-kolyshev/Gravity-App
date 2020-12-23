@@ -7,15 +7,15 @@ import {Button} from "../../../common/Buttons/Button";
 import {ButtonWrapper} from "../../Quiz-styled";
 import {useToasts} from "react-toast-notifications";
 
-export default ({currentValue, handlePageNext, currentKey, error, handleChange}) => {
+export default ({currentValue, handlePageNext, currentKey, touched, error, handleChange}) => {
 
-    useEffect(() => {
-        if (!!error)
+    /*useEffect(() => {
+        if (!!error && !!touched)
             addToast(error, {
                 appearance: 'error',
                 autoDismiss: true,
             })
-    }, [error])
+    }, [error])*/
 
     const { addToast } = useToasts()
 

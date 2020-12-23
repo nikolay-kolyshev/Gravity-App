@@ -42,7 +42,7 @@ export default ({handlePageNext, setFieldValue, currentValue, currentKey}) => {
                     title="Male"
                     gender="male"
                     isActive={currentValue === "male"}
-                    style={{marginRight: "24px"}}
+                    style={{marginRight: "8px"}}
                     onClick={() => handleConfirm("male")}
                 />
                 <CardButtonGender

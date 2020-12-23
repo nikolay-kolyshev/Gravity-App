@@ -13,6 +13,7 @@ import QuizLevelActive from "./components/QuizLevelActive/QuizLevelActive";
 import QuizHardWork from "./components/QuizHardWork/QuizHardWork";
 import QuizInjuries from "./components/QuizInjuries/QuizInjuries";
 import QuizEmail from "./components/QuizEmail/QuizEmail";
+import QuizMostAttention from "./components/QuizMostAttention/QuizMostAttention";
 
 export default () => {
 
@@ -20,6 +21,7 @@ export default () => {
         ["gender", QuizGender],
         ["goal", QuizGoal],
         ["motivation", QuizMotivation],
+        ["mostAttention", QuizMostAttention],
         ["age", withInputField(
             "How old are you?",
             {
@@ -67,7 +69,7 @@ export default () => {
         (currObj, [key, value]) => (
             {
                 ...currObj,
-                [key]: key === "injuries"
+                [key]: key === "gender"
             }
     ), {}))
 
@@ -110,6 +112,7 @@ export default () => {
                 gender: null,
                 goal: null,
                 motivation: null,
+                mostAttention: null,
                 age: 18,
                 height: 54,
                 currentWeight: 15,
@@ -126,7 +129,14 @@ export default () => {
             validationSchema={validationSchema}
         >
 
-            {({setFieldValue, handleSubmit, values, errors, handleChange, handleBlur}) => {
+            {({setFieldValue,
+                  handleSubmit,
+                  values,
+                  errors,
+                  touched,
+                  handleChange,
+                  handleBlur
+            }) => {
 
                 const fieldsComponentsLayout = fieldsComponents.reduce(
                     (currObj, [key, value], index) => (
@@ -138,11 +148,13 @@ export default () => {
                                     setFieldValue={setFieldValue}
                                     fieldsComponentsState={fieldsComponentsState}
                                     setFieldsComponentsState={setFieldsComponentsState}
+                                    allValues={values}
                                     currentValue={values[key]}
                                     prevKey={index !== 0 && fieldsComponents.length > 1 ? fieldsComponents[index-1][0] : fieldsComponents[index][0]}
                                     currentKey={key}
                                     handleChange={handleChange}
                                     handleBlur={handleBlur}
+                                    touched={touched}
                                     error={errors[key]}
                                     nextKey={
                                         fieldsComponents.length > 1 && index < fieldsComponents.length-1
@@ -172,7 +184,7 @@ export default () => {
                             style={{margin: "-19px -16px 9px"}}
                         />
                         {showFieldsComponents()}
-                        <button type="submit">Submit</button>
+                        {/*<button type="submit">Submit</button>*/}
                     </Form>
                 )
 

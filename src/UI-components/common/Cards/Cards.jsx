@@ -2,7 +2,7 @@ import React from "react"
 import {
     CardButtonGenderStyled,
     CardButtonStyled,
-    CardGoalStyled, CardListStyled,
+    CardGoalStyled, CardListStyled, IconConfirmWrapper,
     IconStyled, ImageGenderWrapper,
     IsActivePictureStyled,
     Title, TitleWrapper,
@@ -36,9 +36,9 @@ export const CardButton = ({ContentWrapper, isActive, icon, title, emojiArray, c
 
 export const CardButtonGender = ({isActive, icon, title, emojiArray, gender, ...restProps}) => (
     <CardButtonGenderStyled isActive={isActive} icon={icon} {...restProps}>
-        <div>
+        <IconConfirmWrapper>
             {isActive && (<IsActivePictureStyled icon={CheckmarkSmall}/>)}
-        </div>
+        </IconConfirmWrapper>
         <ImageGenderWrapper>
             <img src={gender === "female" ? femalePhoto : malePhoto}/>
         </ImageGenderWrapper>
@@ -50,8 +50,8 @@ export const CardButtonGender = ({isActive, icon, title, emojiArray, gender, ...
     </CardButtonGenderStyled>
 )
 
-export const QuestList = ({horizontalGap, children}) =>(
-    <CardListStyled horizontalGap={horizontalGap}>
+export const QuestList = ({children}) =>(
+    <CardListStyled>
         {children}
     </CardListStyled>
 )

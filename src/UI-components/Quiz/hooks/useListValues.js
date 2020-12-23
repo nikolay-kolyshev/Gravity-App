@@ -1,17 +1,6 @@
 import {useEffect, useState} from "react";
 
-export default currentValues => {
-
-    const initialValues = new Map ([
-        ["Спина, поясница", false],
-        ["Плечи", false],
-        ["Локти", false],
-        ["Кисти рук", false],
-        ["Пупочная грыжа", false],
-        ["Колени", false],
-        ["Тазобедренный сустав", false],
-        ["Голеностоп, лодыжка", false]
-    ])
+export default (initialValues, currentValues) => {
 
     const [valuesMap, setValuesMap] = useState(initialValues)
 
