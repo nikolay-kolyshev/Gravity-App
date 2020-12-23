@@ -1,27 +1,29 @@
 {
   "files": {
     "main.css": "/Gravity-App/static/css/main.424c7103.chunk.css",
-    "main.js": "/Gravity-App/static/js/main.06112642.chunk.js",
-    "main.js.map": "/Gravity-App/static/js/main.06112642.chunk.js.map",
+    "main.js": "/Gravity-App/static/js/main.2328dffe.chunk.js",
+    "main.js.map": "/Gravity-App/static/js/main.2328dffe.chunk.js.map",
     "runtime-main.js": "/Gravity-App/static/js/runtime-main.a314fe7f.js",
     "runtime-main.js.map": "/Gravity-App/static/js/runtime-main.a314fe7f.js.map",
     "static/css/2.740103e8.chunk.css": "/Gravity-App/static/css/2.740103e8.chunk.css",
-    "static/js/2.802ada04.chunk.js": "/Gravity-App/static/js/2.802ada04.chunk.js",
-    "static/js/2.802ada04.chunk.js.map": "/Gravity-App/static/js/2.802ada04.chunk.js.map",
+    "static/js/2.6101d4dc.chunk.js": "/Gravity-App/static/js/2.6101d4dc.chunk.js",
+    "static/js/2.6101d4dc.chunk.js.map": "/Gravity-App/static/js/2.6101d4dc.chunk.js.map",
     "index.html": "/Gravity-App/index.html",
     "static/css/2.740103e8.chunk.css.map": "/Gravity-App/static/css/2.740103e8.chunk.css.map",
     "static/css/main.424c7103.chunk.css.map": "/Gravity-App/static/css/main.424c7103.chunk.css.map",
-    "static/js/2.802ada04.chunk.js.LICENSE.txt": "/Gravity-App/static/js/2.802ada04.chunk.js.LICENSE.txt",
+    "static/js/2.6101d4dc.chunk.js.LICENSE.txt": "/Gravity-App/static/js/2.6101d4dc.chunk.js.LICENSE.txt",
     "static/media/Checkmark_small.567b4c2a.svg": "/Gravity-App/static/media/Checkmark_small.567b4c2a.svg",
     "static/media/apple.b850ea73.png": "/Gravity-App/static/media/apple.b850ea73.png",
     "static/media/broccoli.9f26749e.png": "/Gravity-App/static/media/broccoli.9f26749e.png",
     "static/media/cruasan.f290fabc.png": "/Gravity-App/static/media/cruasan.f290fabc.png",
     "static/media/email.f296e753.png": "/Gravity-App/static/media/email.f296e753.png",
     "static/media/female.adf2593a.png": "/Gravity-App/static/media/female.adf2593a.png",
+    "static/media/female_circle.3ad80e1e.png": "/Gravity-App/static/media/female_circle.3ad80e1e.png",
     "static/media/fire.77e3af07.png": "/Gravity-App/static/media/fire.77e3af07.png",
     "static/media/heart_eyes.76853a5c.png": "/Gravity-App/static/media/heart_eyes.76853a5c.png",
     "static/media/logo.ed475409.svg": "/Gravity-App/static/media/logo.ed475409.svg",
     "static/media/male.1fb1e322.png": "/Gravity-App/static/media/male.1fb1e322.png",
+    "static/media/male_circle.dfb480a7.png": "/Gravity-App/static/media/male_circle.dfb480a7.png",
     "static/media/nerd_face.0a4b3232.png": "/Gravity-App/static/media/nerd_face.0a4b3232.png",
     "static/media/rabbit.a732f6cc.png": "/Gravity-App/static/media/rabbit.a732f6cc.png",
     "static/media/sloth.2899e303.png": "/Gravity-App/static/media/sloth.2899e303.png",
@@ -34,8 +36,8 @@
   "entrypoints": [
     "static/js/runtime-main.a314fe7f.js",
     "static/css/2.740103e8.chunk.css",
-    "static/js/2.802ada04.chunk.js",
+    "static/js/2.6101d4dc.chunk.js",
     "static/css/main.424c7103.chunk.css",
-    "static/js/main.06112642.chunk.js"
+    "static/js/main.2328dffe.chunk.js"
   ]
 }
