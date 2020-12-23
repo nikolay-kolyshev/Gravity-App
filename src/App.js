@@ -7,7 +7,7 @@ import {ThemeProvider} from "styled-components"
 import {LayoutInner, LayoutOuter} from "./styles/common-components/Layout";
 import Routes from "./UI-components/Routes/Routes";
 import { ToastProvider } from 'react-toast-notifications'
-
+import Graph from './UI-components/common/Graphs/Graph'
 const App = () => {
     return (
         <ThemeProvider theme={mainTheme}>
@@ -15,7 +15,7 @@ const App = () => {
                 <GlobalStyle/>
                 <LayoutOuter>
                     <LayoutInner>
-                        <Routes/>
+                        <Graph/>
                     </LayoutInner>
                 </LayoutOuter>
             </ToastProvider>
