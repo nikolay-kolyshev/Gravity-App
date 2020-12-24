@@ -7,8 +7,13 @@ import * as Yup from "yup";
 import withInputField from "./HOC/withInputField";
 import QuizGoal from "./components/QuizGoal/QuizGoal";
 import QuizDietType from "./components/QuizDietType/QuizDietType";
-import Progress from 'react-progressbar';
 import {ProgressStyled} from "./Quiz-styled";
+import QuizTimesDayEat from "./components/QuizTimesDayEat/QuizTimesDayEat";
+import QuizLevelActive from "./components/QuizLevelActive/QuizLevelActive";
+import QuizHardWork from "./components/QuizHardWork/QuizHardWork";
+import QuizInjuries from "./components/QuizInjuries/QuizInjuries";
+import QuizEmail from "./components/QuizEmail/QuizEmail";
+import QuizMostAttention from "./components/QuizMostAttention/QuizMostAttention";
 
 export default () => {
 
@@ -16,6 +21,7 @@ export default () => {
         ["gender", QuizGender],
         ["goal", QuizGoal],
         ["motivation", QuizMotivation],
+        ["mostAttention", QuizMostAttention],
         ["age", withInputField(
             "How old are you?",
             {
@@ -37,8 +43,8 @@ export default () => {
             "Your current weight",
             {
                 type: "number",
-                min: 20,
-                max: 300,
+                min: 15,
+                max: 500,
                 postfix: "kg"
             }
         )],
@@ -46,12 +52,17 @@ export default () => {
             "Your goal weight",
             {
                 type: "number",
-                min: 20,
-                max: 300,
+                min: 15,
+                max: 500,
                 postfix: "kg"
             }
         )],
         ["dietType", QuizDietType],
+        ["timesDayEat", QuizTimesDayEat],
+        ["levelActive", QuizLevelActive],
+        ["injuries", QuizInjuries],
+        ["hardWork", QuizHardWork],
+        ["email", QuizEmail],
     ]
 
     const [fieldsComponentsState, setFieldsComponentsState] = useState(fieldsComponents.reduce(
@@ -67,28 +78,31 @@ export default () => {
     }
 
     const validationSchema = Yup.object({
+
         age: Yup.number()
             .required("Вы не ввели возраст!")
-            .min(18,)
-            .max(90,)
             .integer()
             .truncate(),
+
         height: Yup.number()
-            .required("Вы не ввели рост!")
+            .required("Вы не ввели возраст!")
             .integer()
             .truncate(),
+
         currentWeight: Yup.number()
-            .required("Вы не ввели вес!")
-            .min(20)
-            .max(300)
+            .required("Вы не ввели возраст!")
             .integer()
             .truncate(),
+
         goalWeight: Yup.number()
-            .required("Вы не ввели желаемый вес!")
-            .min(20)
-            .max(300)
+            .required("Вы не ввели вес!")
             .integer()
-            .truncate()
+            .truncate(),
+
+        email: Yup.string()
+            .required("Вы не ввели возраст!")
+            .email("Не корректный email!")
+
     })
 
     return (
@@ -98,17 +112,31 @@ export default () => {
                 gender: null,
                 goal: null,
                 motivation: null,
+                mostAttention: null,
                 age: 18,
-                height: 150,
-                currentWeight: 50,
-                goalWeight: 40
+                height: 54,
+                currentWeight: 15,
+                goalWeight: 15,
+                dietType: null,
+                timesDayEat: null,
+                levelActive: null,
+                injuries: [],
+                hardWork: null,
+                email: null
             }}
             onSubmit={confirmSubmit}
             disabled={true}
             validationSchema={validationSchema}
         >
 
-            {({setFieldValue, handleSubmit, values, errors, handleChange, handleBlur}) => {
+            {({setFieldValue,
+                  handleSubmit,
+                  values,
+                  errors,
+                  touched,
+                  handleChange,
+                  handleBlur
+            }) => {
 
                 const fieldsComponentsLayout = fieldsComponents.reduce(
                     (currObj, [key, value], index) => (
@@ -120,14 +148,16 @@ export default () => {
                                     setFieldValue={setFieldValue}
                                     fieldsComponentsState={fieldsComponentsState}
                                     setFieldsComponentsState={setFieldsComponentsState}
+                                    allValues={values}
                                     currentValue={values[key]}
                                     prevKey={index !== 0 && fieldsComponents.length > 1 ? fieldsComponents[index-1][0] : fieldsComponents[index][0]}
                                     currentKey={key}
                                     handleChange={handleChange}
                                     handleBlur={handleBlur}
+                                    touched={touched}
                                     error={errors[key]}
                                     nextKey={
-                                        (fieldsComponents.length > 1 && index < fieldsComponents.length-1)
+                                        fieldsComponents.length > 1 && index < fieldsComponents.length-1
                                             ? fieldsComponents[index+1][0]
                                             : fieldsComponents[index][0]
                                     }
@@ -154,7 +184,7 @@ export default () => {
                             style={{margin: "-19px -16px 9px"}}
                         />
                         {showFieldsComponents()}
-                        <button type="submit">Submit</button>
+                        {/*<button type="submit">Submit</button>*/}
                     </Form>
                 )
 

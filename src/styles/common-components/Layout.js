@@ -2,6 +2,7 @@ import styled from "styled-components"
 import Div100vh from "react-div-100vh";
 
 export const LayoutOuter = styled(Div100vh)`
+  background-color: #ddd;
   width: 100%;
   min-height: 100vh;
   display: flex;

@@ -3,9 +3,11 @@ import {Typography, TypographyTitle} from "../../../../styles/common-components/
 import {CardButton, QuestList} from "../../../common/Cards/Cards";
 import {Button} from "../../../common/Buttons/Button";
 import {ButtonWrapper} from "../../Quiz-styled";
-import useQuizInjuriesValues from "../../hooks/useQuizInjuriesValues";
+import useQuizInjuriesValues from "../../hooks/useListValues";
 import {useProgressDisplayMode} from "../../hooks/useProgressDisplayMode";
 import QuizProgress from "../../common_components/QuizProgress/QuizProgress";
+import useListValues from "../../hooks/useListValues";
+import {CardButtonListStyled} from "../../../common/Cards/Cards-styled";
 
 const progressStringsArray = [
     "Analyxing your dietary profile",
@@ -17,9 +19,20 @@ const progressStringsArray = [
 
 const durationStep = 1000
 
+const initialValues = new Map ([
+    ["Спина, поясница", false],
+    ["Плечи", false],
+    ["Локти", false],
+    ["Кисти рук", false],
+    ["Пупочная грыжа", false],
+    ["Колени", false],
+    ["Тазобедренный сустав", false],
+    ["Голеностоп, лодыжка", false]
+])
+
 export default ({setFieldValue, currentValue, handlePageNext, currentKey, error}) => {
 
-    const [valuesMap, setValuesMap] = useQuizInjuriesValues(currentValue)
+    const [valuesMap, setValuesMap] = useListValues(initialValues, currentValue)
     const [progressDisplayMode, setProgressDisplayMode] = useProgressDisplayMode(progressStringsArray.length, durationStep, handlePageNext)
 
     const handleConfirm = () => {
@@ -41,9 +54,18 @@ export default ({setFieldValue, currentValue, handlePageNext, currentKey, error}
 
     const valuesElements = Object.entries(Object.fromEntries(valuesMap)).map(
         ([key, value]) => (
-            <CardButton type="button" isActive={value} ContentWrapper={true} onClick={() => handleSelect(key)}>
+            <CardButtonListStyled
+                type="button"
+                isActive={value}
+                ContentWrapper={true}
+                paddingX={15} paddingY={10}
+                horizontalGap={8}
+                verticalGap={8}
+                onClick={() => handleSelect(key)}
+                bold={false}
+            >
                 {key}
-            </CardButton>
+            </CardButtonListStyled>
         )
     )
 
@@ -58,7 +80,7 @@ export default ({setFieldValue, currentValue, handlePageNext, currentKey, error}
             <Typography style={{marginBottom:"40px"}} align="center">
                 Если да, отметьте что болит. Программа адаптируется под эти ограничения.
             </Typography>
-            <QuestList horizontalGap={true}>
+            <QuestList>
                 {valuesElements}
             </QuestList>
             <ButtonWrapper>
