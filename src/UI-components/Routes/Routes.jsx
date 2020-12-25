@@ -1,13 +1,20 @@
 import React from "react"
-import {Route} from "react-router-dom";
+import {Route, Switch, Redirect} from "react-router-dom";
 import Quiz from "../Quiz/Quiz";
+import WeightProgram from "../WeightProgram/WeightProgram";
 
 export default () => {
     return (
-       <>
-           <Route to="/quiz">
+       <Switch>
+           <Route exact path="/weight_program">
+               <WeightProgram/>
+           </Route>
+           <Route exact path="/quiz">
                <Quiz/>
            </Route>
-       </>
+           <Route>
+               <Redirect to="/weight_program"/>
+           </Route>
+       </Switch>
     )
 }

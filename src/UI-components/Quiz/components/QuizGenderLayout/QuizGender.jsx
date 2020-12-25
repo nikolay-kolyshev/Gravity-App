@@ -11,6 +11,8 @@ import {
 } from "../../../../styles/common-components/Typography-styled";
 import {LayoutFlex} from "../../../../styles/common-components/Layout";
 import {CardButtonGender} from "../../../common/Cards/Cards";
+import WeightProgram from "../../../WeightProgram/WeightProgram";
+import MainWrapper from "../../../MainWrapper/MainWrapper";
 
 
 export default ({handlePageNext, setFieldValue, currentValue, currentKey}) => {
@@ -21,21 +23,10 @@ export default ({handlePageNext, setFieldValue, currentValue, currentKey}) => {
     }
 
     return (
-        <div>
-            <Header style={{marginBottom: "34px"}}>
-                <Logo url={logo}/>
-            </Header>
-            <TypographyHGroup style={{marginBottom: "48px"}}>
-                <TypographySupTitle style={{marginBottom: "5px"}}>
-                    Займёт у вас не больше минуты
-                </TypographySupTitle>
-                <TypographyTitle>
-                    Получите ваш персональный план по снижению веса
-                </TypographyTitle>
-            </TypographyHGroup>
-            <TypographyСlassified style={{marginBottom: "31px"}} align="center">
-                Выберите ваш пол
-            </TypographyСlassified>
+        <MainWrapper
+            supTitle="Займёт у вас не больше минуты"
+            title="Получите ваш персональный план по снижению веса"
+        >
             <LayoutFlex width="100%" heigth="100%">
                 <CardButtonGender
                     type="button"
@@ -53,7 +44,7 @@ export default ({handlePageNext, setFieldValue, currentValue, currentKey}) => {
                     onClick={() => handleConfirm("female")}
                 />
             </LayoutFlex>
-        </div>
+        </MainWrapper>
     )
 
 }

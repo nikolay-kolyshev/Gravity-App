@@ -5,8 +5,11 @@ export const TypographyStyles = css`
 `
 
 export const Typography = styled.p`
-  ${TypographyStyles}
-  ${({align}) => !!align && `text-align: ${align}`};
+  ${TypographyStyles};
+  ${({size}) => size && `font-size: ${size};`}
+  ${({weight}) => weight && `font-weight: ${weight};`}
+  ${({align}) => !!align && `text-align: ${align};`}
+  ${({color}) => !!color && `color: ${color};`}
 `
 
 export const TypographyHGroup = styled.hgroup`
@@ -22,6 +25,32 @@ export const TypographyTitle = styled.h1`
   span {
     font-size: ${({spanSize}) => spanSize + "px" || "inherit"};
   }
+`
+
+export const TypographyLine = styled(Typography)`
+  
+  width: 100%;
+  display: flex;
+  align-items: center;
+  
+  &:before {
+      content: "";
+      display: block;
+      background: rgba(0, 0, 0, 0.1);
+      height: 1px;
+      width: 100%;
+      margin-right: 18px;
+  }
+  
+  &:after{
+      content: "";
+      display: block;
+      background: rgba(0, 0, 0, 0.1);
+      height: 1px;
+      width: 100%;
+      margin-left: 18px;
+  }
+  
 `
 
 export const TypographySupTitle = styled.h2`

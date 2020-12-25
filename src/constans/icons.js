@@ -19,6 +19,11 @@ import umbrella from "../assets/images/icons/umbrella.png"
 import womanDancing from "../assets/images/icons/woman_dancing.png"
 import womanSuperhero from "../assets/images/icons/woman_superhero.png"
 import email from "../assets/images/icons/email.png"
+import countPrefixFire from "../assets/images/weight_program/statistics/count_prefix_fire.svg"
+import countPrefixSteps from "../assets/images/weight_program/statistics/count_prefix_steps.svg"
+import indexWeightMarker from "../assets/images/weight_program/statistics/index_weight_marker.svg"
+import glassEnabled from "../assets/images/weight_program/statistics/glass_enabled.png"
+import glassDisabled from "../assets/images/weight_program/statistics/glass_disabled.png"
 
 export const ICON_APPLE = apple
 export const ICON_AVACADO = avacado
@@ -41,3 +46,9 @@ export const ICON_UMBRELLA = umbrella
 export const ICON_WOMAN_DANCING = womanDancing
 export const ICON_WOMAN_SUPERHERO = womanSuperhero
 export const ICON_EMAIL = email
+
+export const ICON_COUNT_PREFIX_FIRE = countPrefixFire
+export const ICON_COUNT_PREFIX_STEPS = countPrefixSteps
+export const ICON_INDEX_WEIGHT_MARKER = indexWeightMarker
+export const ICON_GLASS_ENABLED = glassEnabled
+export const ICON_GLASS_DISABLED = glassDisabled
