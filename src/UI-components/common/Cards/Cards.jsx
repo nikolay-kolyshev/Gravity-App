@@ -2,7 +2,7 @@ import React from "react"
 import {
     CardButtonGenderStyled,
     CardButtonStyled,
-    CardGoalStyled, CardListStyled, IconConfirmWrapper,
+    CardGoalStyled, CardListStyled, CardProblemStyled, IconConfirmWrapper,
     IconStyled, ImageGenderWrapper,
     IsActivePictureStyled,
     Title, TitleWrapper,
@@ -12,7 +12,8 @@ import {EmojiList} from "./Emoji/EmojiList";
 import malePhoto from "../../../../src/assets/images/other/male.png"
 import femalePhoto from "../../../../src/assets/images/other/female.png"
 import {LayoutFlex} from "../../../styles/common-components/Layout";
-import {TypographyTitle} from "../../../styles/common-components/Typography-styled";
+import {TypographyTitle, TypographyСlassified} from "../../../styles/common-components/Typography-styled";
+import {ProblemWrapper} from "../../ProgrammList/components/Problems/Problem-styled";
 
 export const CardButton = ({ContentWrapper, isActive, icon, title, emojiArray, children, ...restProps}) => (
     <CardButtonStyled ContentWrapper={ContentWrapper} isActive={isActive} icon={icon} isSimple={!icon && !emojiArray} {...restProps}>
@@ -62,4 +63,13 @@ export const CardGoal = ({icon, children}) => (
             {children}
         </div>
     </CardGoalStyled>
+)
+export const CardProblem = ({title,time,children,...restProps}) =>(
+    <CardProblemStyled {...restProps}>
+        <div>
+            <TypographyTitle style={{fontSize:"22px"}}>{title}</TypographyTitle>
+            <TypographyСlassified>{time}</TypographyСlassified>
+        </div>
+        {children}
+    </CardProblemStyled>
 )

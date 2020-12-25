@@ -13,6 +13,7 @@ export default ({handlePageNext, error, currentValue, currentKey, handleChange, 
             addToast(error, {
                 appearance: 'error',
                 autoDismiss: true,
+                autoDismissTimeout:1500
             })
     }, [error])
 

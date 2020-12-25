@@ -5,9 +5,8 @@ import GlobalStyle from "./styles/global-styled"
 import {mainTheme} from "./styles/themes"
 import {ThemeProvider} from "styled-components"
 import {LayoutInner, LayoutOuter} from "./styles/common-components/Layout";
-import Routes from "./UI-components/Routes/Routes";
 import { ToastProvider } from 'react-toast-notifications'
-
+import Problems from './UI-components/ProgrammList/components/Problems/Problems'
 const App = () => {
     return (
         <ThemeProvider theme={mainTheme}>
@@ -15,12 +14,11 @@ const App = () => {
                 <GlobalStyle/>
                 <LayoutOuter>
                     <LayoutInner>
-                        <Routes/>
+                        <Problems/>
                     </LayoutInner>
                 </LayoutOuter>
             </ToastProvider>
         </ThemeProvider>
-    )
-}
+    )}
 
 export default App

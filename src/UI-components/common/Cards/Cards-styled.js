@@ -44,6 +44,8 @@ export const CardGoalStyled = styled.div`
           font-weight: bold;
      }
 `
+export const CardGoalListStyled = styled.div`
+`
 
 export const CardButtonListStyled = styled(CardButtonStyled)`
 
@@ -174,4 +176,43 @@ export const CardListStyled = styled.div`
      display: flex;
      flex-wrap: wrap;
      justify-content: center;
+`
+export const CardProblemStyled = styled.div`
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+  width: 132px;
+  height: 160px;
+  backdrop-filter: blur(14.8927px);
+  border-radius: 8px;
+  padding: 14px;
+  div{
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  H1{
+    z-index: 2;
+    color:white;
+  }
+  p{
+    z-index: 2;
+    color:white;
+  }
+  img{
+    z-index: 1;
+  }
+`
+export const CardProblemImage = styled.div`
+  position: absolute;
+  
+    img {
+      display: block;
+      height: 100%;
+      width: inherit;
+    }
 `
