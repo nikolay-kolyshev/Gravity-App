@@ -3,7 +3,7 @@ import {Devider, StatisticsStyled, Title} from "./Statistics-styled";
 import {Typography} from "../../../../styles/common-components/Typography-styled";
 import Count from "./Count";
 
-export default ({color, title, count, countPrefix, countPostfix, children, ...restProps}) => {
+export default ({color, title, count, countPrefix, countPostfix, children, disabledDevider, ...restProps}) => {
 
     return (
         <StatisticsStyled {...restProps}>
@@ -27,7 +27,10 @@ export default ({color, title, count, countPrefix, countPostfix, children, ...re
             <div>
                 {children}
             </div>
-            <Devider style={{marginTop: "48px"}}/>
+            {
+                !disabledDevider &&
+                    <Devider style={{marginTop: "48px"}}/>
+            }
         </StatisticsStyled>
     )
 

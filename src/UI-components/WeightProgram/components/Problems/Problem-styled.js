@@ -8,10 +8,12 @@ export const ProblemWrapper = styled.div`
   grid-gap: 10px;
   background: #F5F7FA;
   border-radius: 16px;
-  padding: 0px 24px 30px 24px;
+  
+  @media screen and (max-width: 340px) {
+    grid-template-columns: 1fr;
+  }
 `
 export const ProblemStyled = styled.div`
-  width: 328px;
   display: flex;
   flex-direction: column;
 

@@ -13,7 +13,7 @@ import malePhoto from "../../../../src/assets/images/other/male.png"
 import femalePhoto from "../../../../src/assets/images/other/female.png"
 import {LayoutFlex} from "../../../styles/common-components/Layout";
 import {TypographyTitle, TypographyСlassified} from "../../../styles/common-components/Typography-styled";
-import {ProblemWrapper} from "../../ProgrammList/components/Problems/Problem-styled";
+import {ProblemWrapper} from "../../WeightProgram/components/Problems/Problem-styled";
 
 export const CardButton = ({ContentWrapper, isActive, icon, title, emojiArray, children, ...restProps}) => (
     <CardButtonStyled ContentWrapper={ContentWrapper} isActive={isActive} icon={icon} isSimple={!icon && !emojiArray} {...restProps}>

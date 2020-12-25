@@ -6,7 +6,6 @@ import {CircleWrapper, StringsWrapper} from "./QuizProgress-styled";
 import QuizProgressCircle from "./QuizProgressCircle";
 import {LayoutFlex} from "../../../../styles/common-components/Layout";
 import {AnimatedList} from "react-animated-list";
-import uuid from "react-uuid"
 
 const QuizProgress = ({progressStringsArray, theme, durationStep, start, end}) => {
 
@@ -44,7 +43,6 @@ const QuizProgress = ({progressStringsArray, theme, durationStep, start, end}) =
     )
 
 }
-
 
 export default withTheme(QuizProgress)
 

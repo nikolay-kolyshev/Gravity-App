@@ -184,7 +184,6 @@ export const CardProblemStyled = styled.div`
   justify-content: space-between;
   overflow: hidden;
   position: relative;
-  width: 132px;
   height: 160px;
   backdrop-filter: blur(14.8927px);
   border-radius: 8px;
