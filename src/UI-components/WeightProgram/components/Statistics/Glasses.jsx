@@ -8,7 +8,7 @@ export default ({count, value}) => {
     const glassesElements = new Array(count).fill(count, 0, count).map(
         (item, index) =>
             <Glass>
-                <img src={(index <= value) ? ICON_GLASS_ENABLED : ICON_GLASS_DISABLED}/>
+                <img src={(index < value) ? ICON_GLASS_ENABLED : ICON_GLASS_DISABLED}/>
             </Glass>
     )
 

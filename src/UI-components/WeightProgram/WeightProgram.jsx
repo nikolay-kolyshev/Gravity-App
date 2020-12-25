@@ -36,7 +36,7 @@ export default () => {
                 color="#2F8FFF"
                 style={{marginBottom: "50px"}}
             >
-                <Glasses count={10} value={5}/>
+                <Glasses count={10} value={9}/>
             </Statistics>
             <Statistics
                 title="Твоя необходимая активность на день"
@@ -44,9 +44,9 @@ export default () => {
                 <ProgressActive
                     filledBackground="linear-gradient(90deg, #FFF72B -21.32%, #FF5C00 97.84%"
                     color="#FF7205"
-                    count={450}
+                    count={100}
                     countPrefix={ICON_COUNT_PREFIX_FIRE}
-                    percent={35}
+                    percent={60}
                     text="Ккал сжечь"
                     style={{marginTop: "22px"}}
                 />

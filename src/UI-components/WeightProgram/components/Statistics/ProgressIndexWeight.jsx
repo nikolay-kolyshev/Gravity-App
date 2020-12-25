@@ -7,7 +7,7 @@ import {ICON_INDEX_WEIGHT_MARKER} from "../../../../constans/icons";
 
 export default ({filledBackground, startValue, endValue, indexPercent, ...restProps}) => {
 
-    const valuesElements = [startValue, (endValue-startValue)/2, endValue].map(
+    const valuesElements = [startValue, (endValue-startValue)/2+startValue, endValue].map(
         item =>
             <Typography size={"11px"} color={"rgba(0, 0, 0, 0.5)"}>
                 {item}
