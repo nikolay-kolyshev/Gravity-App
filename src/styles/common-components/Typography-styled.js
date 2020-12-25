@@ -9,7 +9,7 @@ export const Typography = styled.p`
   ${({size}) => size && `font-size: ${size};`}
   ${({weight}) => weight && `font-weight: ${weight};`}
   ${({align}) => !!align && `text-align: ${align};`}
-  ${({color}) => !!color && `color: ${color};`}
+   ${({color}) => !!color && `color: ${color};`}
 `
 
 export const TypographyHGroup = styled.hgroup`

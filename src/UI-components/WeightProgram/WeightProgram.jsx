@@ -8,6 +8,7 @@ import {ICON_COUNT_PREFIX_FIRE, ICON_COUNT_PREFIX_STEPS} from "../../constans/ic
 import ProgressIndexWeight from "./components/Statistics/ProgressIndexWeight";
 import Glasses from "./components/Statistics/Glasses";
 import Problems from "./components/Problems/Problems";
+import Music from "./components/Music/Music";
 import GraphResults from "./components/GraphResults/GraphResults";
 
 export default () => {
@@ -96,8 +97,8 @@ export default () => {
                         style={{marginTop: "22px"}}
                     />
                 </Statistics>
-
-                <Problems/>
+                <Problems style={{paddingBottom:"10px"}}/>
+                <Music/>
 
 
 

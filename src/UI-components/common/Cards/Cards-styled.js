@@ -208,10 +208,44 @@ export const CardProblemStyled = styled.div`
 `
 export const CardProblemImage = styled.div`
   position: absolute;
-  
     img {
       display: block;
       height: 100%;
       width: inherit;
     }
+`
+
+export const MusicStyled = styled.div`
+  
+  background: #F5F7FA;
+  border-radius: 16px;
+  p{
+    margin-bottom: 18px;
+  }
+  padding: 24px 17px;
+`
+export const CardMusicStyled = styled.div`
+  overflow: hidden;
+  background: #4D4D4D;
+  backdrop-filter: blur(40px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 98px;
+  margin-bottom: 24px;
+`
+export const CardMusicTypeStyled = styled.div`
+  display:flex;
+  width: 74px;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  
+`
+export const CardsMusicWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 `
