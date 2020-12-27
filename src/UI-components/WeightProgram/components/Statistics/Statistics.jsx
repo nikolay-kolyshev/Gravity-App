@@ -1,7 +1,8 @@
 import React from "react"
-import {Devider, StatisticsStyled, Title} from "./Statistics-styled";
+import {StatisticsStyled, Title} from "./Statistics-styled";
 import {Typography} from "../../../../styles/common-components/Typography-styled";
 import Count from "./Count";
+import {Devider} from "../../WeightProgram-styled";
 
 export default ({color, title, count, countPrefix, countPostfix, children, disabledDevider, ...restProps}) => {
 

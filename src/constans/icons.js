@@ -24,6 +24,20 @@ import countPrefixSteps from "../assets/images/weight_program/statistics/count_p
 import indexWeightMarker from "../assets/images/weight_program/statistics/index_weight_marker.svg"
 import glassEnabled from "../assets/images/weight_program/statistics/glass_enabled.png"
 import glassDisabled from "../assets/images/weight_program/statistics/glass_disabled.png"
+import lessonsCalendar from "../assets/images/weight_program/lessons_plan/calendar.svg"
+import lessonsTime from "../assets/images/weight_program/lessons_plan/time.svg"
+import lessonsTraining from "../assets/images/weight_program/lessons_plan/training.svg"
+import lessonsWeigher from "../assets/images/weight_program/lessons_plan/weigher.svg"
+import lessonsPlus from "../assets/images/weight_program/lessons_plan/plus.svg"
+import triflesDownload from "../assets/images/weight_program/pleasant_trifles/download.svg"
+import triflesClock from "../assets/images/weight_program/pleasant_trifles/clock.svg"
+import triflesAppleHealth from "../assets/images/weight_program/pleasant_trifles/apple_health.svg"
+import advantagesHome from "../assets/images/weight_program/advantages/home.svg"
+import advantagesMedal from "../assets/images/weight_program/advantages/medal.svg"
+import advantagesDarts from "../assets/images/weight_program/advantages/darts.svg"
+import advantagesClock from "../assets/images/weight_program/advantages/clock.svg"
+import advantagesChat from "../assets/images/weight_program/advantages/chat.svg"
+import advantagesSalad from "../assets/images/weight_program/advantages/salad.svg"
 
 export const ICON_APPLE = apple
 export const ICON_AVACADO = avacado
@@ -52,3 +66,20 @@ export const ICON_COUNT_PREFIX_STEPS = countPrefixSteps
 export const ICON_INDEX_WEIGHT_MARKER = indexWeightMarker
 export const ICON_GLASS_ENABLED = glassEnabled
 export const ICON_GLASS_DISABLED = glassDisabled
+
+export const ICON_LESSONS_CALENDAR = lessonsCalendar
+export const ICON_LESSONS_TIME = lessonsTime
+export const ICON_LESSONS_TRAINING = lessonsTraining
+export const ICON_LESSONS_WEIGHER = lessonsWeigher
+export const ICON_LESSONS_PLUS = lessonsPlus
+
+export const ICON_TRIFLES_DOWNLOAD = triflesDownload
+export const ICON_TRIFLES_CLOCK = triflesClock
+export const ICON_TRIFLES_APPLE_HEALTH = triflesAppleHealth
+
+export const ICON_ADVANTAGES_HOME = advantagesHome
+export const ICON_ADVANTAGES_MEDAL = advantagesMedal
+export const ICON_ADVANTAGES_DARTS = advantagesDarts
+export const ICON_ADVANTAGES_CLOCK = advantagesClock
+export const ICON_ADVANTAGES_CHAT = advantagesChat
+export const ICON_ADVANTAGES_SALAD = advantagesSalad

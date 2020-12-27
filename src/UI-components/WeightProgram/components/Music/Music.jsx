@@ -8,8 +8,8 @@ import Rest from "../../../../assets/images/other/Rest.png";
 import Calm_down from "../../../../assets/images/other/Calm_down.png";
 
 
-export default () => (
-    <MusicStyled>
+export default ({...restProps}) => (
+    <MusicStyled {...restProps}>
         <Typography weight={600} style={{letterSpacing: "-0.05em",whiteSpace: "nowrap",marginLeft:"7px",fontSize:"24px"}}>
             Музыка подстраивается<br/>
             под темп

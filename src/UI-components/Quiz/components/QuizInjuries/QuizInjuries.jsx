@@ -1,13 +1,12 @@
 import React from 'react'
 import {Typography, TypographyTitle} from "../../../../styles/common-components/Typography-styled";
-import {CardButton, QuestList} from "../../../common/Cards/Cards";
+import {QuestList} from "../../../common/Cards/Cards";
 import {Button} from "../../../common/Buttons/Button";
-import {ButtonWrapper} from "../../Quiz-styled";
-import useQuizInjuriesValues from "../../hooks/useListValues";
+import useListValues from "../../hooks/useListValues";
 import {useProgressDisplayMode} from "../../hooks/useProgressDisplayMode";
 import QuizProgress from "../../common_components/QuizProgress/QuizProgress";
-import useListValues from "../../hooks/useListValues";
 import {CardButtonListStyled} from "../../../common/Cards/Cards-styled";
+import {ButtonWrapper} from "../../../../App-styled";
 
 const progressStringsArray = [
     "Analyxing your dietary profile",

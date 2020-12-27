@@ -4,18 +4,10 @@ import {ICON_EMAIL} from "../../../../constans/icons";
 import {ImageWrapper, QuizEmailStyled} from "./QuizEmail-styled";
 import InputMain from "../../../common/InputMain/InputMain";
 import {Button} from "../../../common/Buttons/Button";
-import {ButtonWrapper} from "../../Quiz-styled";
 import {useToasts} from "react-toast-notifications";
+import {ButtonWrapper} from "../../../../App-styled";
 
 export default ({currentValue, handlePageNext, currentKey, touched, error, handleChange}) => {
-
-    /*useEffect(() => {
-        if (!!error && !!touched)
-            addToast(error, {
-                appearance: 'error',
-                autoDismiss: true,
-            })
-    }, [error])*/
 
     const { addToast } = useToasts()
 

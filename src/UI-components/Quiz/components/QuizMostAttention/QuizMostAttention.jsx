@@ -5,8 +5,8 @@ import maleImage from "../../../../../src/assets/images/other/male_circle.png"
 import femaleImage from "../../../../../src/assets/images/other/female_circle.png"
 import {ImageWrapper, QuestListStyled, SelectorWrapper} from "./QuizMostAttemption-styled";
 import {Button} from "../../../common/Buttons/Button";
-import {ButtonWrapper} from "../../Quiz-styled";
 import {CardButtonListStyled} from "../../../common/Cards/Cards-styled";
+import {ButtonWrapper} from "../../../../App-styled";
 
 const initialValues = new Map ([
     ["Arms", false],

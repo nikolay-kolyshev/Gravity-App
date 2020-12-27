@@ -4,7 +4,7 @@ import {Button} from "../../../common/Buttons/Button";
 import {useToasts} from 'react-toast-notifications'
 import {QuizPageInputStyled} from "./QuizPageInput-styled";
 import InputBox from "../../../common/InputBox/InputBox";
-import {ButtonWrapper} from "../../Quiz-styled";
+import {ButtonWrapper} from "../../../../App-styled";
 
 export default ({handlePageNext, error, currentValue, currentKey, handleChange, title, inputConfig}) => {
 

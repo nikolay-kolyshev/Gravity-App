@@ -9,7 +9,12 @@ export const Typography = styled.p`
   ${({size}) => size && `font-size: ${size};`}
   ${({weight}) => weight && `font-weight: ${weight};`}
   ${({align}) => !!align && `text-align: ${align};`}
-   ${({color}) => !!color && `color: ${color};`}
+  ${({color}) => !!color && `color: ${color};`}
+  ${({lineHeight}) => !!lineHeight && `line-height: ${lineHeight};`}
+  span {
+    font-size: ${({spanSize}) => spanSize + "px" || "inherit"};
+    font-weight: ${({spanWeight}) => spanWeight || "inherit"};
+  }
 `
 
 export const TypographyHGroup = styled.hgroup`
