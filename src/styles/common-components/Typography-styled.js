@@ -14,6 +14,21 @@ export const Typography = styled.p`
   span {
     font-size: ${({spanSize}) => spanSize + "px" || "inherit"};
     font-weight: ${({spanWeight}) => spanWeight || "inherit"};
+    color: ${({spanColor}) => spanColor || "inherit"};
+    ${({theme, lineThrough, lineThrowColor}) => lineThrough && `
+        margin: 0 4px;
+        position: relative;
+        &:after{
+            content: "";
+            display: block;
+            background-color: ${lineThrowColor || theme.colors.secondary};
+            position: absolute;
+            height: 2px;    
+            width: calc(100% + 8px);
+            right: -4px;
+            bottom: calc(50% - 2px);
+        }
+    `}
   }
 `
 

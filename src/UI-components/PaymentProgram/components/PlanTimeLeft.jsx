@@ -1,17 +1,15 @@
 import React, {useEffect, useState} from "react"
 import {PlanText, PlanTimeLeftStyled} from "../PaymentProgram-styled";
 
-export default ({endDate}) => {
+export default ({endDate, ...restProps}) => {
 
-    const getCurrentTimeLeft = (milliseconds) => {
+    const getCurrentTimeLeft = () => {
         const seconds = Math.trunc((endDate-Date.now()) / 1000)
         const prefix = seconds/60 < 10 ? "0" : ""
         return `${prefix}${Math.trunc(seconds/60)}:${seconds%60}`
     }
 
     const [timeLeft, setTimeLeft] = useState(endDate-Date.now())
-
-    debugger
 
     useEffect(() => {
         if (timeLeft < 0) {
@@ -24,9 +22,9 @@ export default ({endDate}) => {
     }, [timeLeft])
 
     return (
-        <PlanTimeLeftStyled>
+        <PlanTimeLeftStyled {...restProps}>
             <PlanText weight={500} align="center">
-                Plan Reserved for <span>{getCurrentTimeLeft(timeLeft)}</span>
+                Plan Reserved for <span>{getCurrentTimeLeft()}</span>
             </PlanText>
         </PlanTimeLeftStyled>
     )

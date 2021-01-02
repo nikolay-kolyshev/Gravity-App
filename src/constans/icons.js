@@ -38,6 +38,9 @@ import advantagesDarts from "../assets/images/weight_program/advantages/darts.sv
 import advantagesClock from "../assets/images/weight_program/advantages/clock.svg"
 import advantagesChat from "../assets/images/weight_program/advantages/chat.svg"
 import advantagesSalad from "../assets/images/weight_program/advantages/salad.svg"
+import paymentRefoundShield  from "../assets/images/payment_program/payment_refound/shield.svg"
+import accordionPlus from "../assets/images/payment_program/accordion/plus.svg"
+import accordionMinus from "../assets/images/payment_program/accordion/minus.svg"
 
 export const ICON_APPLE = apple
 export const ICON_AVACADO = avacado
@@ -83,3 +86,8 @@ export const ICON_ADVANTAGES_DARTS = advantagesDarts
 export const ICON_ADVANTAGES_CLOCK = advantagesClock
 export const ICON_ADVANTAGES_CHAT = advantagesChat
 export const ICON_ADVANTAGES_SALAD = advantagesSalad
+
+export const ICON_PAYMENT_SHIELD = paymentRefoundShield
+
+export const ICON_ACCORDION_PLUS = accordionPlus
+export const ICON_ACCORDION_MINUS = accordionMinus

@@ -1,15 +1,30 @@
 import MainWrapper from "../MainWrapper/MainWrapper";
-import React from "react";
+import React, {useState} from "react";
 import PlanTimeLeft from "./components/PlanTimeLeft";
+import PlanCeil from "./components/PlanCeil";
+import PaymentRefound from "./components/PaymentRefound";
+import StartNow from "./components/StartNow";
+import OurEmail from "./components/OurEmail";
+import Footer from "../Footer/Footer";
+import Accordion from "./components/Accordion";
 
 export default () => {
 
     return (
-        <MainWrapper title="Начни меняться прямо сейчас">
+        <div>
+            <MainWrapper title="Начни меняться прямо сейчас">
 
-            <PlanTimeLeft endDate={Date.now() + 592000}/>
+                <PlanTimeLeft endDate={Date.now() + 592000} style={{marginBottom: "30px"}}/>
+                <PlanCeil style={{marginBottom: "44px"}}/>
+                <Accordion style={{marginBottom: "111px"}}/>
+                <PaymentRefound style={{marginBottom: "83px"}}/>
+                <StartNow style={{marginBottom: "52px"}}/>
+                <OurEmail style={{marginBottom: "42px"}}/>
 
-        </MainWrapper>
+            </MainWrapper>
+            <Footer style={{margin: "0 -24px -19px"}}/>
+        </div>
+
     )
 
 }
