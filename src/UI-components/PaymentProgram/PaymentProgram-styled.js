@@ -13,6 +13,47 @@ export const PlanText = styled(Typography)`
       color: ${({theme}) => theme.colors.secondary};
     }
 `
+export const ProgramExpirienceStyled = styled.div`
+  background: linear-gradient(91.94deg, #CBA5CF 0%, #798FFF 96.72%);
+  padding: 42px 30px 64px 30px;
+  margin-left: -24px;
+  margin-right: -24px;
+  div{
+    display: flex;
+    justify-content: space-between;
+  }
+`
+export const ImageProgressWrapper = styled.div`
+    margin:24px 0;
+    display: flex;
+    justify-content: center;
+    img {
+      display: block;
+    }
+`
+export const UsersReviewsStyled = styled.div`
+    margin: 80px 0;
+    
+`
+export const UserReviewStyled = styled.div`
+    padding-top:24px;    
+    div{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      
+    }
+    p{
+      text-align: left;
+    }
+    ${({gapLine}) => gapLine&&"padding-bottom:32px;border-bottom:1px solid #E0E0E0;"}
+`
+export const Img = styled.img`
+  border-radius: ${({borderRadius}) => borderRadius ? borderRadius :"20px"};
+  width: ${({size}) => size ? size : "40px"};
+  height: ${({size}) => size ? size : "40px"};
+  display: block;
+`
 
 export const PlanCeilImageWrapper = styled.div`
     width: 100%;
