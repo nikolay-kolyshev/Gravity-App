@@ -48,8 +48,6 @@ const QuizProgressCircle = React.memo(({progressStringsArray, durationStep, star
 
 const AnimatedProgressProvider = ({durationStep, easingFunction, children, values}) => {
 
-    debugger
-
     const [valuesIndex, setValuesIndex] = useState(0)
 
     useEffect(() => {

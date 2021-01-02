@@ -2,6 +2,10 @@ import styled from "styled-components"
 import Div100vh from "react-div-100vh";
 
 export const LayoutOuter = styled.div`
+  
+  // TODO: убрать, когда будет production-build
+  min-height: 100vh;
+
   background-color: #eee;
   width: 100%;
   display: flex;
@@ -18,6 +22,10 @@ export const LayoutInner = styled.main`
   max-width: 375px; 
   height: 100%;
   position: relative;
+  
+  // TODO: убрать, когда будет production-build
+  min-height: 100vh;
+  width: 100%;
 `
 
 export const LayoutFlex = styled.div`

@@ -75,7 +75,7 @@ const GlobalStyle = createGlobalStyle`
     input,
     button,
     textarea,
-    select {
+    select{
       font: inherit;
       background-color: transparent;
       border: none;
@@ -89,6 +89,18 @@ const GlobalStyle = createGlobalStyle`
     input[button]
     input[submit]{
       cursor: pointer;
+    }
+    
+    // delete arrows in input-number
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    /* Firefox */
+    input[type=number] {
+      -moz-appearance: textfield;
     }
     
     

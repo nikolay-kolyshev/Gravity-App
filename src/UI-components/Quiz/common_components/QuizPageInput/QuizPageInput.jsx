@@ -6,7 +6,7 @@ import {QuizPageInputStyled} from "./QuizPageInput-styled";
 import InputBox from "../../../common/InputBox/InputBox";
 import {ButtonWrapper} from "../../../../App-styled";
 
-export default ({handlePageNext, error, currentValue, currentKey, handleChange, title, inputConfig}) => {
+export default ({handlePageNext, error, currentValue, currentKey, handleChange, title, setFieldValue, inputConfig}) => {
 
     useEffect(() => {
         if (!!error)
@@ -27,7 +27,8 @@ export default ({handlePageNext, error, currentValue, currentKey, handleChange, 
                 <InputBox
                     name={currentKey}
                     value={currentValue}
-                    onChange={handleChange}
+                    setFieldValue={setFieldValue}
+                    currentKey={currentKey}
                     {...inputConfig}
                 />
                 <ButtonWrapper>

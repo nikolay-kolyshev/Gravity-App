@@ -6,6 +6,7 @@ export const LogoStyled = styled.div`
      height: ${({height}) => height || 40}px;
      
      img {
-        ${ImageInDiv}   
+        width: 100%;
+        height: 100%;
      }
 `

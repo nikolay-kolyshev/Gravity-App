@@ -176,12 +176,11 @@ export default () => {
                         return fieldsComponentsLayout[fieldKey]
                     }
 
-                // TODO: fix problem of division by zero
                 return (
                     <Form onSubmit={handleSubmit} style={{width: "100%"}}>
                         <ProgressStyled
                             completed={Object.values(fieldsComponentsState).indexOf(true) * 100 / (fieldsComponents.length - 1)}
-                            style={{margin: "-19px -16px 9px"}}
+                            style={{margin: "-19px -24px 9px"}}
                         />
                         {showFieldsComponents()}
                         {/*<button type="submit">Submit</button>*/}
