@@ -7,6 +7,7 @@ export default () => {
         <MainWrapper title="Начни меняться прямо сейчас">
 
 
+
         </MainWrapper>
     )
 
